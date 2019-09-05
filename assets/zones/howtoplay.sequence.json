@@ -1,0 +1,70 @@
+{
+    "name": "howtoplay",
+    "description": "Shows the user how to play the game",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "background_zone1",
+                    "type": "sprite",
+                    "materialName": "background_zone1"
+                },
+                {
+                    "name": "",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 0,
+                        "height": 0
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "player",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 420
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "idle",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 4,
+                    "frameSequence": [0, 1, 2, 1]
+                },
+                {
+                    "name": "playercollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "circle",
+                        "radius": 36
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "movementbehaviour",
+                "type": "keyboardmovement",
+                "speed": 1
+            }]
+        }
+    ]
+}

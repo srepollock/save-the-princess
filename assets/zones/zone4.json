@@ -1,0 +1,41 @@
+{
+    "name": "zone4",
+    "description": "Gideon battles the mighty dragon",
+    "id": "",
+    "objects": [
+        {
+            "name": "dragon",
+            "transform": {
+                "position": {
+                    "x": 600,
+                    "y": 100
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "idle",
+                    "type": "animatedsprite",
+                    "materialName": "dragon_fly",
+                    "frameHeight": 80,
+                    "frameWidth": 80,
+                    "frameCount": 6,
+                    "frameSequence": [0, 1, 2, 3, 2, 1]
+                },
+                {
+                    "name": "dragoncollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 80,
+                        "height": 80
+                    }
+                }
+            ],
+            "behaviours": []
+        }
+    ]
+}

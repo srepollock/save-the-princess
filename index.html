@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Typescript Game Engine on Electron@latest</title>
+    <style>
+      html, body {
+        margin: 0;
+        overflow: hidden;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // You can also require other files to run in this process
+      require('./dist/renderer.js')
+    </script>
+  </body>
+</html>

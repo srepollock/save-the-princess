@@ -1,0 +1,47 @@
+{
+    "name": "opening.sequence",
+    "description": "Opening sequence for the game. This will give the user",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "outsidetheboxlogo",
+                    "type": "sprite",
+                    "materialName": "outsidetheboxlogo",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "nextsceneclick",
+                "type": "guibehaviour",
+                "actions": [{
+                        "listen": "MOUSE_DOWN",
+                        "response": "nextscene"
+                    },
+                    {
+                        "listen": "MOUSE_UP",
+                        "response": "nextscene"
+                    },
+                    {
+                        "listen": "KEY_DOWN",
+                        "response": "nextscene"
+                    },
+                    {
+                        "listen": "KEY_UP",
+                        "response": "nextscene"
+                    }
+                ]
+            }]
+        }
+    ]
+}

@@ -1,27 +1,18 @@
 {
-  "name": "typescript-bootstrap",
-  "version": "1.0.2",
-  "description": "A TypeScript bootstrap project.",
-  "main": "src/index.ts",
+  "name": "de-electron-latest",
+  "version": "0.0.0-semantically-released",
+  "description": "Divine Engine in Electron (latest).",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf build/* dist/* docs/* lib/*",
     "commit": "git add --all && git-cz",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "docs": "typedoc --excludeExternals --externalPattern \"node_modules/**\" --ignoreCompilerErrors --name TypeScript\\ Bootstrap --out docs/ --mode file --module umd --target ESNEXT --readme none src/*",
-    "lint": "tslint src/**/*.ts",
-    "prebuild": "npm run lint",
-    "precommit": "npm run lint",
     "semantic-release": "semantic-release",
     "setup:all": "npm run setup:semantic-release && npm run setup:commitizen && npm run setup:update-package-json",
     "setup:update-package-json": "sed -i .orig '3s/.*/  \"version\": \"0.0.0-semantically-released\",/' package.json",
     "setup:commitizen": "commitizen init cz-conventional-changelog --save-dev --save-exact",
     "setup:semantic-release": "semantic-release-cli setup",
-    "test": "nyc mocha --opts mocha.opts \"test/**/*.spec.{ts,tsx}\" --exit",
-    "test:integration": "mocha --opts mocha.opts \"test/integration/*.spec.{ts,tsx}\" --exit",
-    "test:functional": "mocha --opts mocha.opts \"test/functional/*.spec.{ts,tsx}\" --exit",
-    "test:unit": "mocha --opts mocha.opts \"test/unit/*.spec.{ts,tsx}\" --exit",
-    "watch": "mocha --opts mocha.opts -w \"test/**/*.spec.{ts,tsx}\" --exit"
+    "start": "tsc ; electron .",
+    "watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -30,10 +21,9 @@
   "keywords": [
     "typescript",
     "nodejs",
-    "instanbul",
     "commitizen",
     "semantic-release",
-    "codecov"
+    "electron"
   ],
   "author": "Spencer Pollock <spencer@spollock.ca>",
   "license": "MIT",
@@ -42,21 +32,18 @@
   },
   "homepage": "http://spollock.ca/typescript-bootstrap/",
   "dependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.6",
-    "chai": "^4.2.0",
-    "codecov": "^3.2.0",
-    "commitizen": "^3.0.5",
-    "cz-conventional-changelog": "^2.1.0",
-    "mocha": "^5.2.0",
-    "nyc": "^13.3.0",
-    "semantic-release": "^15.13.3",
-    "semantic-release-cli": "^4.1.0",
-    "ts-node": "^8.0.2",
-    "typedoc": "^0.13.0",
+    "electron": "^4.1.4",
     "typescript": "^3.1.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/three": "^0.103.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^2.1.0",
+    "http-server": "^0.11.1",
+    "semantic-release": "^15.13.19",
+    "semantic-release-cli": "^4.1.0",
+    "three": "^0.107.0"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -64,20 +51,20 @@
   },
   "nyc": {
     "extension": [
-        ".ts",
-        ".tsx"
+      ".ts",
+      ".tsx"
     ],
     "include": [
-        "src/**/*.ts"
+      "src/**/*.ts"
     ],
     "exclude": [
-        "dist",
-        "docs",
-        "lib"
+      "dist",
+      "docs",
+      "lib"
     ],
     "reporter": [
-        "text-lcov",
-        "text-summary"
+      "text-lcov",
+      "text-summary"
     ],
     "all": true
   }

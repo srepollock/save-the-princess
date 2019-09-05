@@ -1,0 +1,207 @@
+{
+    "name": "zone1",
+    "description": "Gideon begins his adventure",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": -20
+                },
+                "scale": {
+                    "x": 6,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "background_zone1",
+                    "type": "sprite",
+                    "materialName": "zone1_forest",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "background2",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": -20
+                },
+                "scale": {
+                    "x": 6,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "background_zone1",
+                    "type": "sprite",
+                    "materialName": "zone1_forest",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 550
+                },
+                "scale": {
+                    "x": 800,
+                    "y": 0.1
+                }
+            },
+            "children": [],
+            "components": [{
+                "name": "groundcollision",
+                "type": "collision",
+                "shape": {
+                    "type": "rectangle",
+                    "width": 800,
+                    "height": 0.1
+                }
+            }],
+            "behaviours": []
+        },
+        {
+            "name": "flag",
+            "transform": {
+                "position": {
+                    "x": 750,
+                    "y": 500
+                },
+                "scale": {
+                    "x": 0.4,
+                    "y": 0.4
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "flag",
+                    "type": "sprite",
+                    "materialName": "flag"
+                },
+                {
+                    "name": "flagcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 18,
+                        "height": 18
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "flagbehaviour",
+                "type": "flag"
+            },
+            {
+                "name": "wolfrotation",
+                "type": "rotation",
+                "rotation": {
+                    "z": 0.01
+                }
+            }]
+        },
+        {
+            "name": "wolf",
+            "transform": {
+                "position": {
+                    "x": 700,
+                    "y": 500
+                },
+                "rotation": {
+                    "y": 3.14159
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wolfsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wolf_walk",
+                    "frameHeight": 80,
+                    "frameWidth": 80,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 50,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "player",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 4,
+                    "frameSequence": [0, 1, 2, 1],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "playercollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 45,
+                        "height": 50
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "playercontroller",
+                "type": "player",
+                "animatedSpriteName": "peasentsprite",
+                "playerCollisionComponent": "playercollision",
+                "groundCollisionComponent": "groundcollision",
+                "enemyCollisionComponent": "enemycollision"
+            }]
+        }
+    ]
+}

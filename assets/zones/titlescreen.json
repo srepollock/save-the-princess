@@ -1,0 +1,101 @@
+{
+    "name": "titlescreen",
+    "description": "Title screen; main screen selection",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": -20
+                },
+                "scale": {
+                    "x": 6,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "background_zone1",
+                    "type": "sprite",
+                    "materialName": "zone1_forest",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "background2",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": -20
+                },
+                "scale": {
+                    "x": 6,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "background_zone1",
+                    "type": "sprite",
+                    "materialName": "zone1_forest",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "player",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "aiplayercontroller",
+                "type": "aimovement",
+                "start": {
+                    "x": 20,
+                    "y": 520
+                },
+                "end": {
+                    "x": 750,
+                    "y": 520
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                }
+            }]
+        }
+    ]
+}
