@@ -1,11 +1,13 @@
 {
-  "name": "de-electron-latest",
-  "version": "0.0.0-semantically-released",
-  "description": "Divine Engine in Electron (latest).",
+  "name": "save-the-princess",
+  "version": "0.0.1",
+  "description": "Save the Princess built on the Divine Engine.",
   "main": "./dist/main.js",
   "scripts": {
     "build": "tsc",
+    "clean": "rm -rf ./dist ./build",
     "commit": "git add --all && git-cz",
+    "dist": "electron-builder",
     "semantic-release": "semantic-release",
     "setup:all": "npm run setup:semantic-release && npm run setup:commitizen && npm run setup:update-package-json",
     "setup:update-package-json": "sed -i .orig '3s/.*/  \"version\": \"0.0.0-semantically-released\",/' package.json",
@@ -16,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/srepollock/typescript-bootstrap.git"
+    "url": "https://github.com/srepollock/save-the-princess.git"
   },
   "keywords": [
     "typescript",
@@ -28,44 +30,46 @@
   "author": "Spencer Pollock <spencer@spollock.ca>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/srepollock/typescript-bootstrap/issues"
+    "url": "https://github.com/srepollock/save-the-princess/issues"
   },
-  "homepage": "http://spollock.ca/typescript-bootstrap/",
+  "homepage": "http://spollock.ca/save-the-princess/",
   "dependencies": {
-    "electron": "^4.1.4",
-    "typescript": "^3.1.6"
+
   },
   "devDependencies": {
-    "@types/three": "^0.103.2",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^2.1.0",
-    "http-server": "^0.11.1",
+    "electron": "^4.2.10",
+    "electron-builder": "^21.2.0",
     "semantic-release": "^15.13.19",
     "semantic-release-cli": "^4.1.0",
-    "three": "^0.107.0"
+    "typescript": "^3.6.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "nyc": {
-    "extension": [
-      ".ts",
-      ".tsx"
+  "build": {
+    "appId": "ca.spollock.savetheprincess",
+    "buildResources": "app",
+    "files": [
+      "./assets/**/*"
     ],
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "dist",
-      "docs",
-      "lib"
-    ],
-    "reporter": [
-      "text-lcov",
-      "text-summary"
-    ],
-    "all": true
+    "mac": {
+      "category": "public.app-category.games",
+      "contents": [
+        {
+          "x": 110,
+          "y": 0
+        },
+        {
+          "x": 240,
+          "y": 0,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   }
 }

@@ -11,47 +11,167 @@
                     "y": -20
                 },
                 "scale": {
-                    "x": 6,
+                    "x": 8,
                     "y": 6
                 }
             },
             "children": [],
             "components": [{
-                    "name": "background_zone1",
+                    "name": "titlescreen",
                     "type": "sprite",
-                    "materialName": "zone1_forest",
+                    "materialName": "titlescreen",
                     "origin": {
                         "x": 0,
                         "y": 0
                     }
                 }
             ],
-            "behaviours": []
+            "behaviours": [{
+                "name": "titlescreensound",
+                "type": "sound",
+                "soundName": "maintheme"
+            }]
         },
         {
-            "name": "background2",
+            "name": "titlemenu",
             "transform": {
                 "position": {
                     "x": 400,
-                    "y": -20
-                },
-                "scale": {
-                    "x": 6,
-                    "y": 6
+                    "y": 300
                 }
             },
-            "children": [],
-            "components": [{
-                    "name": "background_zone1",
-                    "type": "sprite",
-                    "materialName": "zone1_forest",
-                    "origin": {
-                        "x": 0,
-                        "y": 0
-                    }
+            "children": [
+                {
+                    "name": "cursor",
+                    "transform": {
+                        "position": {
+                            "x": 200,
+                            "y": 230
+                        },
+                        "scale": {
+                            "x": 0.3,
+                            "y": 0.3
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "cursor",
+                            "type": "sprite",
+                            "materialName": "cursor"
+                        }
+                    ],
+                    "behaviours": []
+                },
+                {
+                    "name": "playbutton",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 200
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 0.4
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "playbuttonsprite",
+                            "type": "sprite",
+                            "materialName": "play"
+                        }
+                    ],
+                    "behaviours": [
+                        {
+                            "name": "playbutton",
+                            "type": "guibutton",
+                            "zoneName": "zone1_1"
+                        }
+                    ]
+                },
+                {
+                    "name": "howtoplaybutton",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 260
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 0.4
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "howtoplaybuttonsprite",
+                            "type": "sprite",
+                            "materialName": "howtoplay"
+                        }
+                    ],
+                    "behaviours": [
+                        {
+                            "name": "howtoplaybutton",
+                            "type": "guibutton",
+                            "zoneName": "howtoplay.sequence"
+                        }
+                    ]
+                },
+                {
+                    "name": "exitbutton",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 320
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 0.4
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "exitbuttonsprite",
+                            "type": "sprite",
+                            "materialName": "exit"
+                        }
+                    ],
+                    "behaviours": [
+                        {
+                            "name": "exitbutton",
+                            "type": "guibutton",
+                            "zoneName": "exit"
+                        }
+                    ]
                 }
             ],
-            "behaviours": []
+            "components": [],
+            "behaviours": [{
+                "name": "titlemenu",
+                "type": "guibehaviour",
+                "cursor": "cursor",
+                "buttons": [
+                    "playbutton",
+                    "howtoplaybutton",
+                    "exitbutton"
+                ],
+                "actions": [
+                    {
+                        "listen": "KEY_DOWN",
+                        "key": 90,
+                        "response": "cursorSelect"
+                    },
+                    {
+                        "listen": "KEY_DOWN",
+                        "key": 38,
+                        "response": "moveCursorUp"
+                    },
+                    {
+                        "listen": "KEY_DOWN",
+                        "key": 40,
+                        "response": "moveCursorDown"
+                    }
+                ]
+            }]
         },
         {
             "name": "player",
@@ -88,7 +208,7 @@
                     "y": 520
                 },
                 "end": {
-                    "x": 750,
+                    "x": 780,
                     "y": 520
                 },
                 "direction": {

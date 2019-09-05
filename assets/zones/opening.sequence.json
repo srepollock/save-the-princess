@@ -22,23 +22,23 @@
                 }
             ],
             "behaviours": [{
-                "name": "nextsceneclick",
-                "type": "guibehaviour",
+                "name": "nextSceneclick",
+                "type": "openingguibehaviour",
                 "actions": [{
                         "listen": "MOUSE_DOWN",
-                        "response": "nextscene"
+                        "response": "nextScene"
                     },
                     {
                         "listen": "MOUSE_UP",
-                        "response": "nextscene"
+                        "response": "nextScene"
                     },
                     {
                         "listen": "KEY_DOWN",
-                        "response": "nextscene"
+                        "response": "nextScene"
                     },
                     {
                         "listen": "KEY_UP",
-                        "response": "nextscene"
+                        "response": "nextScene"
                     }
                 ]
             }]

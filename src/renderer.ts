@@ -12,6 +12,10 @@ window.onload = () => {
                     "path": "assets/images/black_background.png"
                 },
                 {
+                    "name": "cursor",
+                    "path": "assets/images/cursor.png"
+                },
+                {
                     "name": "outsidetheboxlogo",
                     "path": "assets/images/outsidetheboxlogo.png"
                 },
@@ -90,6 +94,22 @@ window.onload = () => {
                 {
                     "name": "princess_walk",
                     "path": "assets/images/princess_walk.png"
+                },
+                {
+                    "name": "titlescreen",
+                    "path": "assets/images/titlescreen.png"
+                },
+                {
+                    "name": "play",
+                    "path": "assets/images/play.png"
+                },
+                {
+                    "name": "howtoplay",
+                    "path": "assets/images/howtoplay.png"
+                },
+                {
+                    "name": "exit",
+                    "path": "assets/images/exit.png"
                 },
                 {
                     "name": "village_sequence",
