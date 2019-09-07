@@ -1,5 +1,5 @@
 {
-    "name": "zone1_1",
+    "name": "zone1_2",
     "description": "Gideon begins his adventure",
     "id": "",
     "objects": [
@@ -91,7 +91,7 @@
             "transform": {
                 "position": {
                     "x": 750,
-                    "y": 500
+                    "y": 450
                 },
                 "scale": {
                     "x": 0.4,
@@ -117,7 +117,7 @@
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
-                    "zoneName": "zone1_2",
+                    "zoneName": "zone1_3",
                     "playerCollisionComponent": "playercollision",
                     "flagCollisionComponent": "flagcollision"
                 },
@@ -131,7 +131,7 @@
             ]
         },
         {
-            "name": "wolf",
+            "name": "wolf2",
             "transform": {
                 "position": {
                     "x": 700,
@@ -181,6 +181,136 @@
                 "jumpSpriteName": "wolf_walk",
                 "start": {
                     "x": 700,
+                    "y": 500
+                },
+                "end": {
+                    "x": -100,
+                    "y": 500
+                },
+                "direction": {
+                    "x": -1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision"
+            }]
+        },
+        {
+            "name": "wolf3",
+            "transform": {
+                "position": {
+                    "x": 900,
+                    "y": 500
+                },
+                "rotation": {
+                    "y": 3.14159
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wolfsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wolf_walk",
+                    "frameHeight": 80,
+                    "frameWidth": 80,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "wolfsprite",
+                "attackSpriteName": "wolf_attack",
+                "dieSpriteName": "wolf_die",
+                "hitSpriteName": "wolf_hit",
+                "walkSpriteName": "wolf_walk",
+                "idleSpriteName": "wolf_walk",
+                "jumpSpriteName": "wolf_walk",
+                "start": {
+                    "x": 900,
+                    "y": 500
+                },
+                "end": {
+                    "x": -100,
+                    "y": 500
+                },
+                "direction": {
+                    "x": -1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision"
+            }]
+        },
+        {
+            "name": "wolf4",
+            "transform": {
+                "position": {
+                    "x": 1200,
+                    "y": 500
+                },
+                "rotation": {
+                    "y": 3.14159
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wolfsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wolf_walk",
+                    "frameHeight": 80,
+                    "frameWidth": 80,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "wolfsprite",
+                "attackSpriteName": "wolf_attack",
+                "dieSpriteName": "wolf_die",
+                "hitSpriteName": "wolf_hit",
+                "walkSpriteName": "wolf_walk",
+                "idleSpriteName": "wolf_walk",
+                "jumpSpriteName": "wolf_walk",
+                "start": {
+                    "x": 1200,
                     "y": 500
                 },
                 "end": {

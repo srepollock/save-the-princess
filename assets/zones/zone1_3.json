@@ -1,5 +1,5 @@
 {
-    "name": "zone1_1",
+    "name": "zone1_3",
     "description": "Gideon begins his adventure",
     "id": "",
     "objects": [
@@ -91,7 +91,7 @@
             "transform": {
                 "position": {
                     "x": 750,
-                    "y": 500
+                    "y": 450
                 },
                 "scale": {
                     "x": 0.4,
@@ -117,7 +117,7 @@
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
-                    "zoneName": "zone1_2",
+                    "zoneName": "titlescreen",
                     "playerCollisionComponent": "playercollision",
                     "flagCollisionComponent": "flagcollision"
                 },
@@ -134,7 +134,7 @@
             "name": "wolf",
             "transform": {
                 "position": {
-                    "x": 700,
+                    "x": 900,
                     "y": 500
                 },
                 "rotation": {
@@ -180,7 +180,7 @@
                 "idleSpriteName": "wolf_walk",
                 "jumpSpriteName": "wolf_walk",
                 "start": {
-                    "x": 700,
+                    "x": 900,
                     "y": 500
                 },
                 "end": {
@@ -192,7 +192,8 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
-                "groundCollisionComponent": "groundcollision"
+                "groundCollisionComponent": "groundcollision",
+                "jumping": true
             }]
         },
         {
