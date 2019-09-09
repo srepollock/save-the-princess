@@ -7,7 +7,7 @@
     "build": "tsc",
     "clean": "rm -rf ./dist ./build",
     "commit": "git add --all && git-cz",
-    "dist": "electron-builder",
+    "dist": "electron-builder -mwl --publish always",
     "semantic-release": "semantic-release",
     "setup:all": "npm run setup:semantic-release && npm run setup:commitizen && npm run setup:update-package-json",
     "setup:update-package-json": "sed -i .orig '3s/.*/  \"version\": \"0.0.0-semantically-released\",/' package.json",
@@ -34,7 +34,8 @@
   },
   "homepage": "http://spollock.ca/save-the-princess/",
   "dependencies": {
-
+    "divine-engine": "^0.3.3",
+    "electron-packager": "^14.0.5"
   },
   "devDependencies": {
     "commitizen": "^4.0.3",
@@ -51,25 +52,27 @@
     }
   },
   "build": {
-    "appId": "ca.spollock.savetheprincess",
-    "buildResources": "app",
     "files": [
-      "./assets/**/*"
+      "dist/**/*.js",
+      "index.html"
+    ],
+    "extraResources": [
+      "assets/**/*"
     ],
     "mac": {
-      "category": "public.app-category.games",
-      "contents": [
-        {
-          "x": 110,
-          "y": 0
-        },
-        {
-          "x": 240,
-          "y": 0,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
+      "publish": "github"
+    },
+    "win": {
+      "publish": "github"
+    },
+    "linux": {
+      "publish": "github"
     }
+  },
+  "release": {
+    "plubins": [
+      "@semantic-release/commit-analyzer", 
+      "@semantic-release/release-notes-generator"
+    ]
   }
 }

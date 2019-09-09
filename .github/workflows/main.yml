@@ -1,4 +1,4 @@
-name: Node.js CI/CD
+name: Main Workflow
 
 on:
   push:
@@ -12,12 +12,11 @@ on:
 
 jobs:
   build:
-    name: Build and test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: 
-          - 11
+        node_version:
           - 12
         os: 
           - macOS-latest
@@ -25,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+        with:
+          submodules: true
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@master
         with:
@@ -34,7 +35,7 @@ jobs:
           npm run build
 
   gh_pages:
-    needs: build
+    needs: [build, test]
     name: Deploys the README to GitHub Pages
     runs-on: ubuntu-latest
     steps:
@@ -44,25 +45,31 @@ jobs:
         with:
           version: 12
       - name: GitHub Pages Deploy
-        uses: maxheld83/ghpages@v0.2.1
+        uses: maxheld83/ghpages@master
         env:
-          BUILD_DIR: "gh_pages"
+          BUILD_DIR: "."
           GH_PAT: ${{secrets.GITHUB_TOKEN}}
 
-  publish_npm:
-    needs: build
+  release_gh:
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with: 
-          version: 12
-          registry-url: https://registry.npmjs.org/
-      - name: Update package version
-        run: |
-          npm run semantic-release
-          npm publish
-        if: github.event == 'push'
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: |
+          npm install
+          npm run build
+          npm run dist
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish Filter
+        uses: actions/bin/filter@master
+        with:
+          args: branch master
+      - name: Publish
+        uses: mikeal/merge-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

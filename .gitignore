@@ -67,8 +67,10 @@ typings/
 
 # Additional Project files
 lib/
+build/
 dist/
 docs/
+out/
 
 # Codecov
 coverage.lcov
