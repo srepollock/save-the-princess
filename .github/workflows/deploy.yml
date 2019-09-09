@@ -1,11 +1,12 @@
-name: Main Workflow
+name: Deployment Workflow
 
 on:
   push:
     branches:
       - master
 
-  gh_pages:
+jobs:
+  publish_pages:
     name: Deploys the README to GitHub Pages
     runs-on: ubuntu-latest
     steps:
@@ -27,17 +28,13 @@ on:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: apt-get install wine
+      - run: sudo apt-get install wine
       - run: |
           npm install
           npm run build
           npm run dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Publish Filter
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
       - name: Publish
         uses: mikeal/merge-release@master
         env:
