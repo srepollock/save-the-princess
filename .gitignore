@@ -74,3 +74,5 @@ out/
 
 # Codecov
 coverage.lcov
+
+.DS_Store
