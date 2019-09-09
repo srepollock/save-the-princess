@@ -29,8 +29,9 @@ jobs:
         with:
           node-version: 12
       - run: |
-          sudo apt-get install wine32
           sudo apt-get install wine64
+          sudo dpkg --add-architecture i386 && sudo apt update
+          sudo apt-get install wine32
       - run: |
           npm install
           npm run build
