@@ -75,7 +75,7 @@
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
-                        "width": 800,
+                        "width": 1000,
                         "height": 1,
                         "origin": {
                             "x": 0,
