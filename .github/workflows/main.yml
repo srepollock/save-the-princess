@@ -4,38 +4,8 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
-      - feature/*
-      - hotfix/*
-
-jobs:
-  build:
-    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node_version:
-          - 12
-        os: 
-          - macOS-latest
-          - ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-        with:
-          submodules: true
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@master
-        with:
-          version: ${{ matrix.node_version }}
-      - run: |
-          npm install
-          npm run build
 
   gh_pages:
-    needs: [build, test]
     name: Deploys the README to GitHub Pages
     runs-on: ubuntu-latest
     steps:
@@ -51,13 +21,13 @@ jobs:
           GH_PAT: ${{secrets.GITHUB_TOKEN}}
 
   release_gh:
-    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: apt-get install wine
       - run: |
           npm install
           npm run build
