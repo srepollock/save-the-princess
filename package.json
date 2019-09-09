@@ -7,7 +7,7 @@
     "build": "tsc",
     "clean": "rm -rf ./dist ./build",
     "commit": "git add --all && git-cz",
-    "dist": "electron-builder -mwl --publish always",
+    "dist": "electron-builder -mw --publish always",
     "semantic-release": "semantic-release",
     "setup:all": "npm run setup:semantic-release && npm run setup:commitizen && npm run setup:update-package-json",
     "setup:update-package-json": "sed -i .orig '3s/.*/  \"version\": \"0.0.0-semantically-released\",/' package.json",
@@ -38,13 +38,13 @@
     "electron-packager": "^14.0.5"
   },
   "devDependencies": {
-    "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^2.1.0",
+    "commitizen": "*",
+    "cz-conventional-changelog": "*",
     "electron": "^4.2.10",
     "electron-builder": "^21.2.0",
     "semantic-release": "^15.13.19",
     "semantic-release-cli": "^4.1.0",
-    "typescript": "^3.6.2"
+    "typescript": "*"
   },
   "config": {
     "commitizen": {
@@ -52,6 +52,8 @@
     }
   },
   "build": {
+    "productName": "SaveThePrincess",
+    "appId": "com.electron.savetheprincess",
     "files": [
       "dist/**/*.js",
       "index.html"
@@ -60,13 +62,10 @@
       "assets/**/*"
     ],
     "mac": {
-      "publish": "github"
     },
     "win": {
-      "publish": "github"
     },
     "linux": {
-      "publish": "github"
     }
   },
   "release": {

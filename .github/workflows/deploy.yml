@@ -35,8 +35,20 @@ jobs:
           npm run dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Publish
+      - name: Release
         uses: mikeal/merge-release@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Upload Mac to Release
+        uses: JasonEtco/upload-to-release@v0.1.1
+        with:
+          args: "dist/SaveThePrincess-0.0.1.dmg"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Upload Windows to Release
+        uses: JasonEtco/upload-to-release@v0.1.1
+        with:
+          args: "dist/SaveThePrincess Setup 0.0.1.exe"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
