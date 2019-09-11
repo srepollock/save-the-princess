@@ -1,6 +1,6 @@
 {
-    "name": "opening.sequence",
-    "description": "Opening sequence for the game. This will give the user",
+    "name": "zone1.sequence",
+    "description": "Page announcing zone 1",
     "objects": [
         {
             "name": "background",
@@ -12,9 +12,9 @@
             },
             "children": [],
             "components": [{
-                    "name": "spacedragonstudios",
+                    "name": "zone1",
                     "type": "sprite",
-                    "materialName": "spacedragonstudios",
+                    "materialName": "zone1",
                     "origin": {
                         "x": 0,
                         "y": 0

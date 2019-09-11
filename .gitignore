@@ -76,3 +76,6 @@ out/
 coverage.lcov
 
 .DS_Store
+
+*.d.ts
+*.js

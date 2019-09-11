@@ -1,0 +1,311 @@
+{
+    "name": "zone2_2",
+    "description": "Gideon adventures into the forest",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "zone2_forest2",
+                    "type": "sprite",
+                    "materialName": "zone2_forest2",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "zone2sound",
+                "type": "sound",
+                "soundName": "zone2"
+            }]
+        },
+        {
+            "name": "ground",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 500
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 50,
+                        "height": 1,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "water",
+            "transform": {
+                "position": {
+                    "x": 50,
+                    "y": 560
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 1000,
+                        "height": 1,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground2",
+            "transform": {
+                "position": {
+                    "x": 270,
+                    "y": 370
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 150,
+                        "height": 100,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground3",
+            "transform": {
+                "position": {
+                    "x": 420,
+                    "y": 430
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 60,
+                        "height": 100,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground4",
+            "transform": {
+                "position": {
+                    "x": 520,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 150,
+                        "height": 100,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground3",
+            "transform": {
+                "position": {
+                    "x": 590,
+                    "y": 620
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 100,
+                        "height": 100,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "flag",
+            "transform": {
+                "position": {
+                    "x": 780,
+                    "y": 420
+                },
+                "scale": {
+                    "x": 0.4,
+                    "y": 0.4
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "flag",
+                    "type": "sprite",
+                    "materialName": "flag"
+                },
+                {
+                    "name": "flagcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 10,
+                        "height": 10
+                    }
+                }
+            ],
+            "behaviours": [{
+                    "name": "flagbehaviour",
+                    "type": "flag",
+                    "zoneName": "zone2_3",
+                    "playerCollisionComponent": "playercollision",
+                    "flagCollisionComponent": "flagcollision"
+                },
+                {
+                    "name": "flagrotation",
+                    "type": "rotation",
+                    "rotation": {
+                        "z": 0.01
+                    }
+                }
+            ]
+        },
+        {
+            "name": "player",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 450
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 4,
+                    "frameSequence": [0, 1, 2, 1],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "playercollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 45,
+                        "height": 50
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "playercontroller",
+                "type": "player",
+                "animatedSpriteName": "peasentsprite",
+                "attackSpriteName": "peasent_attack",
+                "dieSpriteName": "peasent_die",
+                "hitSpriteName": "peasent_hit",
+                "walkSpriteName": "peasent_walk",
+                "idleSpriteName": "peasent_idle",
+                "jumpSpriteName": "peasent_jump",
+                "playerCollisionComponent": "playercollision",
+                "groundCollisionComponent": "groundcollision",
+                "enemyCollisionComponent": "enemycollision",
+                "flagCollisionComponent": "flagcollision"
+            }]
+        }
+    ]
+}

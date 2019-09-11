@@ -19,7 +19,7 @@
             "components": [{
                     "name": "background_zone1",
                     "type": "sprite",
-                    "materialName": "zone1_forest",
+                    "materialName": "zone1_plains",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -48,7 +48,7 @@
             "components": [{
                     "name": "background_zone1",
                     "type": "sprite",
-                    "materialName": "zone1_forest",
+                    "materialName": "zone1_plains",
                     "origin": {
                         "x": 0,
                         "y": 0

@@ -1,6 +1,6 @@
 {
-    "name": "zone1_3",
-    "description": "Gideon begins his adventure",
+    "name": "zone2_1",
+    "description": "Gideon adventures into the forest",
     "id": "",
     "objects": [
         {
@@ -8,18 +8,18 @@
             "transform": {
                 "position": {
                     "x": 0,
-                    "y": -20
+                    "y": 0
                 },
                 "scale": {
-                    "x": 6,
+                    "x": 8,
                     "y": 6
                 }
             },
             "children": [],
             "components": [{
-                    "name": "background_zone1",
+                    "name": "zone2_forest1",
                     "type": "sprite",
-                    "materialName": "zone1_plains",
+                    "materialName": "zone2_forest1",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -27,45 +27,20 @@
                 }
             ],
             "behaviours": [{
-                "name": "zone1sound",
+                "name": "zone2sound",
                 "type": "sound",
-                "soundName": "zone1"
+                "soundName": "zone2"
             }]
-        },
-        {
-            "name": "background2",
-            "transform": {
-                "position": {
-                    "x": 400,
-                    "y": -20
-                },
-                "scale": {
-                    "x": 6,
-                    "y": 6
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "background_zone1",
-                    "type": "sprite",
-                    "materialName": "zone1_plains",
-                    "origin": {
-                        "x": 0,
-                        "y": 0
-                    }
-                }
-            ],
-            "behaviours": []
         },
         {
             "name": "ground",
             "transform": {
                 "position": {
                     "x": 0,
-                    "y": 580
+                    "y": 500
                 },
                 "scale": {
-                    "x": 800,
+                    "x": 1,
                     "y": 1
                 }
             },
@@ -75,8 +50,98 @@
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
-                        "width": 10000,
+                        "width": 350,
                         "height": 1,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground2",
+            "transform": {
+                "position": {
+                    "x": 380,
+                    "y": 450
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 100,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground3",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 580
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 500,
+                        "height": 1,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground4",
+            "transform": {
+                "position": {
+                    "x": 790,
+                    "y": 500
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 50,
+                        "height": 100,
                         "origin": {
                             "x": 0,
                             "y": 0
@@ -90,8 +155,8 @@
             "name": "flag",
             "transform": {
                 "position": {
-                    "x": 750,
-                    "y": 450
+                    "x": 780,
+                    "y": 420
                 },
                 "scale": {
                     "x": 0.4,
@@ -117,7 +182,7 @@
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
-                    "zoneName": "zone2.sequence",
+                    "zoneName": "zone2_2",
                     "playerCollisionComponent": "playercollision",
                     "flagCollisionComponent": "flagcollision"
                 },
@@ -131,77 +196,11 @@
             ]
         },
         {
-            "name": "wolf",
-            "transform": {
-                "position": {
-                    "x": 900,
-                    "y": 500
-                },
-                "rotation": {
-                    "y": 3.14159
-                },
-                "scale": {
-                    "x": 1.5,
-                    "y": 1.5
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "wolfsprite",
-                    "type": "animatedsprite",
-                    "materialName": "wolf_walk",
-                    "frameHeight": 80,
-                    "frameWidth": 80,
-                    "frameCount": 8,
-                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
-                    "origin": {
-                        "x": 0.5,
-                        "y": 0.5
-                    }
-                },
-                {
-                    "name": "enemycollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 40,
-                        "height": 40
-                    }
-                }
-            ],
-            "behaviours": [{
-                "name": "enemycontroller",
-                "type": "enemy",
-                "animatedSpriteName": "wolfsprite",
-                "attackSpriteName": "wolf_attack",
-                "dieSpriteName": "wolf_die",
-                "hitSpriteName": "wolf_hit",
-                "walkSpriteName": "wolf_walk",
-                "idleSpriteName": "wolf_walk",
-                "jumpSpriteName": "wolf_walk",
-                "start": {
-                    "x": 900,
-                    "y": 500
-                },
-                "end": {
-                    "x": -100,
-                    "y": 500
-                },
-                "direction": {
-                    "x": -1,
-                    "y": 0
-                },
-                "enemyCollisionComponent": "enemycollision",
-                "groundCollisionComponent": "groundcollision",
-                "jumping": true
-            }]
-        },
-        {
             "name": "player",
             "transform": {
                 "position": {
                     "x": 20,
-                    "y": 520
+                    "y": 450
                 },
                 "scale": {
                     "x": 2,

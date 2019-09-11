@@ -1,19 +1,17 @@
 {
   "name": "save-the-princess",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Save the Princess built on the Divine Engine.",
-  "main": "./dist/main.js",
+  "main": "main.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf ./dist ./build",
-    "commit": "git add --all && git-cz",
+    "clean": "rm -rf ./dist",
+    "commit": "git add --all && git-cz; git push",
+    "local-dist": "npm run build; electron-builder -mw --publish never",
     "dist": "electron-builder -mw --publish always",
-    "semantic-release": "semantic-release",
-    "setup:all": "npm run setup:semantic-release && npm run setup:commitizen && npm run setup:update-package-json",
-    "setup:update-package-json": "sed -i .orig '3s/.*/  \"version\": \"0.0.0-semantically-released\",/' package.json",
-    "setup:commitizen": "commitizen init cz-conventional-changelog --save-dev --save-exact",
-    "setup:semantic-release": "semantic-release-cli setup",
-    "start": "tsc ; electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "standard-version",
+    "start": "npm run build; electron .",
     "watch": "tsc --watch"
   },
   "repository": {
@@ -34,16 +32,14 @@
   },
   "homepage": "http://spollock.ca/save-the-princess/",
   "dependencies": {
-    "divine-engine": "^0.3.3",
-    "electron-packager": "^14.0.5"
+    "electron-updater": "^4.0.0"
   },
   "devDependencies": {
+    "standard-version": "*",
     "commitizen": "*",
     "cz-conventional-changelog": "*",
-    "electron": "^4.2.10",
-    "electron-builder": "^21.2.0",
-    "semantic-release": "^15.13.19",
-    "semantic-release-cli": "^4.1.0",
+    "electron": "*",
+    "electron-builder": "*",
     "typescript": "*"
   },
   "config": {
@@ -55,22 +51,23 @@
     "productName": "SaveThePrincess",
     "appId": "com.electron.savetheprincess",
     "files": [
-      "dist/**/*.js",
+      "main.js",
+      "renderer.js",
       "index.html"
     ],
     "extraResources": [
-      "assets/**/*"
+      "assets/images/*.png",
+      "assets/sounds/*.(wav|mp3)",
+      "assets/zones/*.json"
     ],
-    "mac": {
-    },
-    "win": {
-    },
-    "linux": {
+    "publish": {
+      "provider": "github",
+      "publishAutoUpdate": true
     }
   },
   "release": {
     "plubins": [
-      "@semantic-release/commit-analyzer", 
+      "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator"
     ]
   }

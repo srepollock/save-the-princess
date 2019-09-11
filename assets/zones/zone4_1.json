@@ -1,6 +1,6 @@
 {
-    "name": "zone1_3",
-    "description": "Gideon begins his adventure",
+    "name": "zone4_1",
+    "description": "Gideon battles the mighty dragon",
     "id": "",
     "objects": [
         {
@@ -8,18 +8,18 @@
             "transform": {
                 "position": {
                     "x": 0,
-                    "y": -20
+                    "y": 0
                 },
                 "scale": {
-                    "x": 6,
+                    "x": 8,
                     "y": 6
                 }
             },
             "children": [],
             "components": [{
-                    "name": "background_zone1",
+                    "name": "zone4_mountain1",
                     "type": "sprite",
-                    "materialName": "zone1_plains",
+                    "materialName": "zone4_mountain1",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -27,35 +27,10 @@
                 }
             ],
             "behaviours": [{
-                "name": "zone1sound",
+                "name": "zone4sound",
                 "type": "sound",
-                "soundName": "zone1"
+                "soundName": "dragonbosssound"
             }]
-        },
-        {
-            "name": "background2",
-            "transform": {
-                "position": {
-                    "x": 400,
-                    "y": -20
-                },
-                "scale": {
-                    "x": 6,
-                    "y": 6
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "background_zone1",
-                    "type": "sprite",
-                    "materialName": "zone1_plains",
-                    "origin": {
-                        "x": 0,
-                        "y": 0
-                    }
-                }
-            ],
-            "behaviours": []
         },
         {
             "name": "ground",
@@ -90,7 +65,7 @@
             "name": "flag",
             "transform": {
                 "position": {
-                    "x": 750,
+                    "x": 250,
                     "y": 450
                 },
                 "scale": {
@@ -117,7 +92,7 @@
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
-                    "zoneName": "zone2.sequence",
+                    "zoneName": "zone5.sequence",
                     "playerCollisionComponent": "playercollision",
                     "flagCollisionComponent": "flagcollision"
                 },
@@ -131,70 +106,38 @@
             ]
         },
         {
-            "name": "wolf",
+            "name": "dragon",
             "transform": {
                 "position": {
-                    "x": 900,
-                    "y": 500
-                },
-                "rotation": {
-                    "y": 3.14159
+                    "x": 600,
+                    "y": 200
                 },
                 "scale": {
-                    "x": 1.5,
-                    "y": 1.5
+                    "x": 2,
+                    "y": 2
                 }
             },
             "children": [],
             "components": [{
-                    "name": "wolfsprite",
+                    "name": "idle",
                     "type": "animatedsprite",
-                    "materialName": "wolf_walk",
+                    "materialName": "dragon_fly",
                     "frameHeight": 80,
                     "frameWidth": 80,
-                    "frameCount": 8,
-                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
-                    "origin": {
-                        "x": 0.5,
-                        "y": 0.5
-                    }
+                    "frameCount": 6,
+                    "frameSequence": [0, 1, 2, 3, 2, 1]
                 },
                 {
-                    "name": "enemycollision",
+                    "name": "dragoncollision",
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
-                        "width": 40,
-                        "height": 40
+                        "width": 80,
+                        "height": 80
                     }
                 }
             ],
-            "behaviours": [{
-                "name": "enemycontroller",
-                "type": "enemy",
-                "animatedSpriteName": "wolfsprite",
-                "attackSpriteName": "wolf_attack",
-                "dieSpriteName": "wolf_die",
-                "hitSpriteName": "wolf_hit",
-                "walkSpriteName": "wolf_walk",
-                "idleSpriteName": "wolf_walk",
-                "jumpSpriteName": "wolf_walk",
-                "start": {
-                    "x": 900,
-                    "y": 500
-                },
-                "end": {
-                    "x": -100,
-                    "y": 500
-                },
-                "direction": {
-                    "x": -1,
-                    "y": 0
-                },
-                "enemyCollisionComponent": "enemycollision",
-                "groundCollisionComponent": "groundcollision",
-                "jumping": true
-            }]
+            "behaviours": []
         },
         {
             "name": "player",

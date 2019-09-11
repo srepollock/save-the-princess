@@ -1,6 +1,6 @@
 {
     "name": "beginningsequence",
-    "description": "Princess taken, Gideon introduced",
+    "description": "Princess taken; Gideon introduced",
     "id": "",
     "objects": [
         {
@@ -13,9 +13,9 @@
             },
             "children": [],
             "components": [{
-                    "name": "background_zone1",
+                    "name": "village_sequence",
                     "type": "sprite",
-                    "materialName": "background_zone1"
+                    "materialName": "village_sequence"
                 },
                 {
                     "name": "",
