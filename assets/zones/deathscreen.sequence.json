@@ -1,36 +1,29 @@
 {
-    "name": "titlescreen",
-    "description": "Title screen; main screen selection",
-    "id": "",
+    "name": "deathscreen.sequence",
+    "description": "Death sequence. Play again or menu screen.",
     "objects": [
         {
             "name": "background",
             "transform": {
-                "position": {
-                    "x": 0,
-                    "y": -20
-                },
                 "scale": {
-                    "x": 8.01,
+                    "x": 8,
                     "y": 6
                 }
             },
-            "children": [],
+            "children": [
+                
+            ],
             "components": [{
-                    "name": "titlescreen",
+                    "name": "deathscreen",
                     "type": "sprite",
-                    "materialName": "titlescreen",
+                    "materialName": "deathscreen",
                     "origin": {
                         "x": 0,
                         "y": 0
                     }
                 }
             ],
-            "behaviours": [{
-                "name": "titlescreensound",
-                "type": "sound",
-                "soundName": "maintheme"
-            }]
+            "behaviours": []
         },
         {
             "name": "titlemenu",
@@ -46,7 +39,7 @@
                     "transform": {
                         "position": {
                             "x": 200,
-                            "y": 230
+                            "y": 290
                         },
                         "scale": {
                             "x": 0.3,
@@ -67,7 +60,7 @@
                     "transform": {
                         "position": {
                             "x": 0,
-                            "y": 200
+                            "y": 260
                         },
                         "scale": {
                             "x": 1,
@@ -90,34 +83,7 @@
                     ]
                 },
                 {
-                    "name": "howtoplaybutton",
-                    "transform": {
-                        "position": {
-                            "x": 0,
-                            "y": 260
-                        },
-                        "scale": {
-                            "x": 1,
-                            "y": 0.4
-                        }
-                    },
-                    "children": [],
-                    "components": [{
-                            "name": "howtoplaybuttonsprite",
-                            "type": "sprite",
-                            "materialName": "howtoplay"
-                        }
-                    ],
-                    "behaviours": [
-                        {
-                            "name": "howtoplaybutton",
-                            "type": "guibutton",
-                            "zoneName": "howtoplay.sequence"
-                        }
-                    ]
-                },
-                {
-                    "name": "exitbutton",
+                    "name": "menubutton",
                     "transform": {
                         "position": {
                             "x": 0,
@@ -130,16 +96,16 @@
                     },
                     "children": [],
                     "components": [{
-                            "name": "exitbuttonsprite",
+                            "name": "menubuttonsprite",
                             "type": "sprite",
-                            "materialName": "exit"
+                            "materialName": "menubutton"
                         }
                     ],
                     "behaviours": [
                         {
-                            "name": "exitbutton",
+                            "name": "menubutton",
                             "type": "guibutton",
-                            "zoneName": "exit"
+                            "zoneName": "titlescreen"
                         }
                     ]
                 }
@@ -151,8 +117,7 @@
                 "cursor": "cursor",
                 "buttons": [
                     "playbutton",
-                    "howtoplaybutton",
-                    "exitbutton"
+                    "menubutton"
                 ],
                 "actions": [
                     {
@@ -171,50 +136,6 @@
                         "response": "moveCursorDown"
                     }
                 ]
-            }]
-        },
-        {
-            "name": "player",
-            "transform": {
-                "position": {
-                    "x": 20,
-                    "y": 520
-                },
-                "scale": {
-                    "x": 2,
-                    "y": 2
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "peasentsprite",
-                    "type": "animatedsprite",
-                    "materialName": "peasent_walk",
-                    "frameHeight": 72,
-                    "frameWidth": 72,
-                    "frameCount": 8,
-                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
-                    "origin": {
-                        "x": 0.5,
-                        "y": 0.5
-                    }
-                }
-            ],
-            "behaviours": [{
-                "name": "aiplayercontroller",
-                "type": "aimovement",
-                "start": {
-                    "x": 20,
-                    "y": 520
-                },
-                "end": {
-                    "x": 780,
-                    "y": 520
-                },
-                "direction": {
-                    "x": 1,
-                    "y": 0
-                }
             }]
         }
     ]

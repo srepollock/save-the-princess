@@ -50,6 +50,10 @@ window.onload = () => {
                     "path": "assets/images/spacedragonstudios.png"
                 },
                 {
+                    "name": "deathscreen",
+                    "path": "assets/images/deathscreen.png"
+                },
+                {
                     "name": "debug",
                     "path": "assets/images/debug.png"
                 },
@@ -96,6 +100,10 @@ window.onload = () => {
                 {
                     "name": "knight_walk",
                     "path": "assets/images/knight_walk.png"
+                },
+                {
+                    "name": "menubutton",
+                    "path": "assets/images/menubutton.png"
                 },
                 {
                     "name": "peasent_attack",
@@ -419,6 +427,9 @@ window.onload = () => {
                 },
                 {
                     "path": "assets/zones/credits.sequence.json"
+                },
+                {
+                    "path": "assets/zones/deathscreen.sequence.json"
                 }
             ]
         }
