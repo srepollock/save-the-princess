@@ -33,20 +33,20 @@
             }]
         },
         {
-            "name": "ground",
+            "name": "abyss",
             "transform": {
                 "position": {
                     "x": 0,
-                    "y": 580
+                    "y": 620
                 },
                 "scale": {
-                    "x": 800,
+                    "x": 1,
                     "y": 1
                 }
             },
             "children": [],
             "components": [{
-                    "name": "groundcollision",
+                    "name": "deathcollision",
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
@@ -62,33 +62,251 @@
             "behaviours": []
         },
         {
+            "name": "ground",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 580
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 60,
+                        "height": 50,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground2",
+            "transform": {
+                "position": {
+                    "x": 170,
+                    "y": 580
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 250,
+                        "height": 50,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform1",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 410
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 300,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform1_bottom",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 430
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "platformcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 300,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform2",
+            "transform": {
+                "position": {
+                    "x": 410,
+                    "y": 300
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 170,
+                        "height": 20,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform2_bottom",
+            "transform": {
+                "position": {
+                    "x": 410,
+                    "y": 320
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "platformcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 170,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground3",
+            "transform": {
+                "position": {
+                    "x": 650,
+                    "y": 580
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 400,
+                        "height": 50,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
             "name": "flag",
             "transform": {
                 "position": {
-                    "x": 250,
-                    "y": 450
+                    "x": 750,
+                    "y": 470
                 },
                 "scale": {
                     "x": 0.4,
                     "y": 0.4
                 }
             },
-            "children": [],
+            "children": [
+                {
+                    "name": "Inner object",
+                    "transform": {
+                        "position": {
+                            "x": 30,
+                            "y": 30
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                        "name": "flagcollision",
+                        "type": "collision",
+                        "shape": {
+                            "type": "rectangle",
+                            "width": 5,
+                            "height": 5
+                        },
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }],
+                    "behaviours": []
+                }
+            ],
             "components": [{
                     "name": "flag",
                     "type": "sprite",
                     "materialName": "flag"
-                },
-                {
-                    "name": "flagcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 10,
-                        "height": 10
-                    }
-                }
-            ],
+                    }],
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
@@ -154,7 +372,8 @@
                 "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision",
                 "enemyCollisionComponent": "enemycollision",
-                "flagCollisionComponent": "flagcollision"
+                "flagCollisionComponent": "flagcollision",
+                "deathCollisionComponent": "deathcollision"
             }]
         }
     ]

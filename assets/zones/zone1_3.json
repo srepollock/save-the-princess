@@ -98,22 +98,37 @@
                     "y": 0.4
                 }
             },
-            "children": [],
+            "children": [
+                {
+                    "name": "Inner object",
+                    "transform": {
+                        "position": {
+                            "x": 30,
+                            "y": 30
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                        "name": "flagcollision",
+                        "type": "collision",
+                        "shape": {
+                            "type": "rectangle",
+                            "width": 5,
+                            "height": 5
+                        },
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }],
+                    "behaviours": []
+                }
+            ],
             "components": [{
                     "name": "flag",
                     "type": "sprite",
                     "materialName": "flag"
-                },
-                {
-                    "name": "flagcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 10,
-                        "height": 10
-                    }
-                }
-            ],
+                    }],
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
