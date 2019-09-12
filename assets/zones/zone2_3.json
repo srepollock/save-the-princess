@@ -110,7 +110,7 @@
             "transform": {
                 "position": {
                     "x": 600,
-                    "y": 550
+                    "y": 600
                 },
                 "scale": {
                     "x": 1,
@@ -223,6 +223,73 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "troll",
+            "transform": {
+                "position": {
+                    "x": 640,
+                    "y": 660
+                },
+                "rotation": {
+                    "y": 3.14159
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "trollsprite",
+                    "type": "animatedsprite",
+                    "materialName": "troll_attack",
+                    "frameHeight": 80,
+                    "frameWidth": 80,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "trollsprite",
+                "attackSpriteName": "troll_attack",
+                "dieSpriteName": "troll_die",
+                "hitSpriteName": "troll_die",
+                "walkSpriteName": "troll_attack",
+                "idleSpriteName": "troll_attack",
+                "jumpSpriteName": "troll_attack",
+                "maxVelocityY": 5,
+                "start": {
+                    "x": 640,
+                    "y": 200
+                },
+                "end": {
+                    "x": 640,
+                    "y": 660
+                },
+                "direction": {
+                    "x": 0,
+                    "y": -1
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision",
+                "rotate": false
+            }]
         },
         {
             "name": "player",

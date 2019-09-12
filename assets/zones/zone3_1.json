@@ -368,6 +368,130 @@
             ]
         },
         {
+            "name": "goblin",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 360
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "goblinsprite",
+                    "type": "animatedsprite",
+                    "materialName": "goblin_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "goblinsprite",
+                "attackSpriteName": "goblin_walk",
+                "dieSpriteName": "goblin_die",
+                "hitSpriteName": "goblin_die",
+                "walkSpriteName": "goblin_walk",
+                "idleSpriteName": "goblin_walk",
+                "jumpSpriteName": "goblin_walk",
+                "start": {
+                    "x": 0,
+                    "y": 360
+                },
+                "end": {
+                    "x": 260,
+                    "y": 360
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision"
+            }]
+        },
+        {
+            "name": "orc",
+            "transform": {
+                "position": {
+                    "x": 370,
+                    "y": 250
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "orcsprite",
+                    "type": "animatedsprite",
+                    "materialName": "orc_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "orcsprite",
+                "attackSpriteName": "orc_walk",
+                "dieSpriteName": "orc_die",
+                "hitSpriteName": "orc_die",
+                "walkSpriteName": "orc_walk",
+                "idleSpriteName": "orc_walk",
+                "jumpSpriteName": "orc_walk",
+                "start": {
+                    "x": 370,
+                    "y": 250
+                },
+                "end": {
+                    "x": 520,
+                    "y": 250
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision"
+            }]
+        },
+        {
             "name": "player",
             "transform": {
                 "position": {

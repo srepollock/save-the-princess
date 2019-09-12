@@ -95,7 +95,7 @@
                     "shape": {
                         "type": "rectangle",
                         "width": 100,
-                        "height": 1,
+                        "height": 100,
                         "origin": {
                             "x": 0,
                             "y": 0
@@ -110,7 +110,7 @@
             "transform": {
                 "position": {
                     "x": 50,
-                    "y": 560
+                    "y": 600
                 },
                 "scale": {
                     "x": 1,
@@ -125,7 +125,7 @@
                     "shape": {
                         "type": "rectangle",
                         "width": 1000,
-                        "height": 1,
+                        "height": 10,
                         "origin": {
                             "x": 0,
                             "y": 0
@@ -256,6 +256,36 @@
             "behaviours": []
         },
         {
+            "name": "ground4",
+            "transform": {
+                "position": {
+                    "x": 720,
+                    "y": 570
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 200,
+                        "height": 20,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
             "name": "flag",
             "transform": {
                 "position": {
@@ -315,11 +345,73 @@
             ]
         },
         {
+            "name": "platform",
+            "transform": {
+                "position": {
+                    "x": 130,
+                    "y": 500
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 0.7
+                }
+            },
+            "children": [
+                {
+                    "name": "inner object",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 50
+                        }
+                    },
+                    "children": [],
+                    "components": [
+                        {
+                            "name": "platformcollision",
+                            "type": "collision",
+                            "shape": {
+                                "type": "rectangle",
+                                "width": 50,
+                                "height": 2
+                            }
+                        }
+                    ],
+                    "behaviours": [
+                        
+                    ]
+                }
+            ],
+            "components": [{
+                    "name": "movingplatformsprite",
+                    "type": "sprite",
+                    "materialName": "moving_platform"
+                }
+            ],
+            "behaviours": [{
+                "name": "aiplayercontroller",
+                "type": "aimovement",
+                "start": {
+                    "x": 50,
+                    "y": 300
+                },
+                "end": {
+                    "x": 50,
+                    "y": 500
+                },
+                "direction": {
+                    "x": 0,
+                    "y": -1
+                },
+                "rotate": false
+            }]
+        },
+        {
             "name": "player",
             "transform": {
                 "position": {
                     "x": 20,
-                    "y": 450
+                    "y": 430
                 },
                 "scale": {
                     "x": 2,

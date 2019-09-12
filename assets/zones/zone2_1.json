@@ -136,11 +136,55 @@
             "behaviours": []
         },
         {
+            "name": "rightboundary",
+            "transform": {
+                "position": {
+                    "x": 360,
+                    "y": 460
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "rightboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 10,
+                        "height": 100
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "leftboundary",
+            "transform": {
+                "position": {
+                    "x": 410,
+                    "y": 460
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "leftboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 15,
+                        "height": 200
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
             "name": "ground3",
             "transform": {
                 "position": {
-                    "x": 400,
-                    "y": 580
+                    "x": 300,
+                    "y": 560
                 },
                 "scale": {
                     "x": 1,
@@ -154,12 +198,34 @@
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
-                        "width": 500,
-                        "height": 1,
+                        "width": 600,
+                        "height": 40,
                         "origin": {
                             "x": 0,
                             "y": 0
                         }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "rightboundary",
+            "transform": {
+                "position": {
+                    "x": 770,
+                    "y": 460
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "rightboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 10,
+                        "height": 100
                     }
                 }
             ],
@@ -253,6 +319,130 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "lizard",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 510
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "lizardsprite",
+                    "type": "animatedsprite",
+                    "materialName": "lizard_walk",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "lizardsprite",
+                "attackSpriteName": "lizard_walk",
+                "dieSpriteName": "lizard_die",
+                "hitSpriteName": "lizard_die",
+                "walkSpriteName": "lizard_walk",
+                "idleSpriteName": "lizard_walk",
+                "jumpSpriteName": "lizard_walk",
+                "start": {
+                    "x": 400,
+                    "y": 500
+                },
+                "end": {
+                    "x": 720,
+                    "y": 500
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision"
+            }]
+        },
+        {
+            "name": "lizard2",
+            "transform": {
+                "position": {
+                    "x": 250,
+                    "y": 450
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "lizardsprite",
+                    "type": "animatedsprite",
+                    "materialName": "lizard_walk",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 40,
+                        "height": 40
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "lizardsprite",
+                "attackSpriteName": "lizard_walk",
+                "dieSpriteName": "lizard_die",
+                "hitSpriteName": "lizard_die",
+                "walkSpriteName": "lizard_walk",
+                "idleSpriteName": "lizard_walk",
+                "jumpSpriteName": "lizard_walk",
+                "start": {
+                    "x": 0,
+                    "y": 450
+                },
+                "end": {
+                    "x": 250,
+                    "y": 450
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision"
+            }]
         },
         {
             "name": "player",

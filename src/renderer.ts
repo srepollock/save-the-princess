@@ -194,6 +194,58 @@ window.onload = () => {
                     "path": "assets/images/wolf_walk.png"
                 },
                 {
+                    "name": "lizard_walk",
+                    "path": "assets/images/lizard_walk.png"
+                },
+                {
+                    "name": "lizard_die",
+                    "path": "assets/images/lizard_die.png"
+                },
+                {
+                    "name": "treant_run",
+                    "path": "assets/images/treant_run.png"
+                },
+                {
+                    "name": "treant_die",
+                    "path": "assets/images/treant_die.png"
+                },
+                {
+                    "name": "skeleton_run",
+                    "path": "assets/images/skeleton_run.png"
+                },
+                {
+                    "name": "skeleton_die",
+                    "path": "assets/images/skeleton_die.png"
+                },
+                {
+                    "name": "goblin_walk",
+                    "path": "assets/images/goblin_walk.png"
+                },
+                {
+                    "name": "goblin_die",
+                    "path": "assets/images/goblin_die.png"
+                },
+                {
+                    "name": "orc_walk",
+                    "path": "assets/images/orc_walk.png"
+                },
+                {
+                    "name": "orc_die",
+                    "path": "assets/images/orc_die.png"
+                },
+                {
+                    "name": "troll_attack",
+                    "path": "assets/images/troll_attack.png"
+                },
+                {
+                    "name": "troll_die",
+                    "path": "assets/images/troll_die.png"
+                },
+                {
+                    "name": "moving_platform",
+                    "path": "assets/images/moving_platform.png"
+                },
+                {
                     "name": "zone1",
                     "path": "assets/images/zone1.png"
                 },
