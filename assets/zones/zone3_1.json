@@ -193,35 +193,6 @@
             "behaviours": []
         },
         {
-            "name": "platform1_bottom",
-            "transform": {
-                "position": {
-                    "x": 0,
-                    "y": 430
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 300,
-                        "height": 10,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
             "name": "platform2",
             "transform": {
                 "position": {
@@ -241,35 +212,6 @@
                         "type": "rectangle",
                         "width": 170,
                         "height": 20,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "platform2_bottom",
-            "transform": {
-                "position": {
-                    "x": 410,
-                    "y": 320
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 170,
-                        "height": 10,
                         "origin": {
                             "x": 0,
                             "y": 0

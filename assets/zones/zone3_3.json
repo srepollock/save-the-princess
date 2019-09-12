@@ -193,35 +193,6 @@
             "behaviours": []
         },
         {
-            "name": "platform1_bottom",
-            "transform": {
-                "position": {
-                    "x": 0,
-                    "y": 450
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 300,
-                        "height": 10,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
             "name": "platform2",
             "transform": {
                 "position": {
@@ -241,35 +212,6 @@
                         "type": "rectangle",
                         "width": 150,
                         "height": 20,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "platform2_bottom",
-            "transform": {
-                "position": {
-                    "x": 420,
-                    "y": 390
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 170,
-                        "height": 10,
                         "origin": {
                             "x": 0,
                             "y": 0
@@ -309,35 +251,6 @@
             "behaviours": []
         },
         {
-            "name": "platform3_bottom",
-            "transform": {
-                "position": {
-                    "x": 320,
-                    "y": 250
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 40,
-                        "height": 10,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
             "name": "platform4",
             "transform": {
                 "position": {
@@ -367,35 +280,6 @@
             "behaviours": []
         },
         {
-            "name": "platform4_bottom",
-            "transform": {
-                "position": {
-                    "x": 120,
-                    "y": 160
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 150,
-                        "height": 5,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
             "name": "platform5",
             "transform": {
                 "position": {
@@ -410,35 +294,6 @@
             "children": [],
             "components": [{
                     "name": "groundcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 390,
-                        "height": 10,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "platform5_bottom",
-            "transform": {
-                "position": {
-                    "x": 420,
-                    "y": 145
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",

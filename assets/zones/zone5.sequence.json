@@ -81,7 +81,7 @@
                     ]
                 },
                 {
-                    "name": "exitbutton",
+                    "name": "menubutton",
                     "transform": {
                         "position": {
                             "x": 0,
@@ -94,16 +94,16 @@
                     },
                     "children": [],
                     "components": [{
-                            "name": "exitbuttonsprite",
+                            "name": "menubuttonsprite",
                             "type": "sprite",
-                            "materialName": "exit"
+                            "materialName": "menubutton"
                         }
                     ],
                     "behaviours": [
                         {
-                            "name": "exitbutton",
+                            "name": "menubutton",
                             "type": "guibutton",
-                            "zoneName": "exit"
+                            "zoneName": "titlescreen"
                         }
                     ]
                 }
@@ -115,7 +115,7 @@
                 "cursor": "cursor",
                 "buttons": [
                     "playbutton",
-                    "exitbutton"
+                    "menubutton"
                 ],
                 "actions": [
                     {

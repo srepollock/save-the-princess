@@ -106,35 +106,6 @@
             "behaviours": []
         },
         {
-            "name": "platform1_bottom",
-            "transform": {
-                "position": {
-                    "x": 0,
-                    "y": 440
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 300,
-                        "height": 5,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
             "name": "platform2",
             "transform": {
                 "position": {
@@ -154,35 +125,6 @@
                         "type": "rectangle",
                         "width": 150,
                         "height": 10,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "platform2_bottom",
-            "transform": {
-                "position": {
-                    "x": 380,
-                    "y": 310
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 170,
-                        "height": 5,
                         "origin": {
                             "x": 0,
                             "y": 0
@@ -222,35 +164,6 @@
             "behaviours": []
         },
         {
-            "name": "platform3_bottom",
-            "transform": {
-                "position": {
-                    "x": 160,
-                    "y": 190
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 160,
-                        "height": 5,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
             "name": "platform4",
             "transform": {
                 "position": {
@@ -265,35 +178,6 @@
             "children": [],
             "components": [{
                     "name": "groundcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 230,
-                        "height": 10,
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "platform4_bottom",
-            "transform": {
-                "position": {
-                    "x": 480,
-                    "y": 130
-                },
-                "scale": {
-                    "x": 1,
-                    "y": 1
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "platformcollision",
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
