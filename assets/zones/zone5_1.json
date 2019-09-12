@@ -32,6 +32,50 @@
             }]
         },
         {
+            "name": "leftboundary",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "leftboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "rightboundary",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "rightboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
             "name": "ground",
             "transform": {
                 "position": {
