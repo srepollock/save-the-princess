@@ -340,8 +340,8 @@
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
-                        "width": 40,
-                        "height": 40
+                        "width": 30,
+                        "height": 30
                     }
                 }
             ],
@@ -402,8 +402,8 @@
                     "type": "collision",
                     "shape": {
                         "type": "rectangle",
-                        "width": 40,
-                        "height": 40
+                        "width": 30,
+                        "height": 30
                     }
                 }
             ],

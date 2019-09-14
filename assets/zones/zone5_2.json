@@ -1,5 +1,5 @@
 {
-    "name": "zone5_1",
+    "name": "zone5_2",
     "description": "Gideon adventures into the Castle",
     "objects": [
         {
@@ -16,9 +16,9 @@
             },
             "children": [],
             "components": [{
-                    "name": "zone5_castle1",
+                    "name": "zone5_castle2",
                     "type": "sprite",
-                    "materialName": "zone5_castle1",
+                    "materialName": "zone5_castle2",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -150,7 +150,7 @@
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
-                    "zoneName": "zone5_2",
+                    "zoneName": "zone5_3",
                     "playerCollisionComponent": "playercollision",
                     "flagCollisionComponent": "flagcollision"
                 },

@@ -105,7 +105,7 @@
             "name": "ground",
             "transform": {
                 "position": {
-                    "x": 0,
+                    "x": -20,
                     "y": 580
                 },
                 "scale": {
@@ -120,7 +120,7 @@
                     "shape": {
                         "type": "rectangle",
                         "width": 1000,
-                        "height": 1,
+                        "height": 20,
                         "origin": {
                             "x": 0,
                             "y": 0

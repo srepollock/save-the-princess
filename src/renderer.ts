@@ -154,20 +154,24 @@ window.onload = () => {
                     "path": "assets/images/village_sequence.png"
                 },
                 {
-                    "name": "wizard_2_attack_e",
-                    "path": "assets/images/wizard_2_attack_e.png"
+                    "name": "wizard_attack_e",
+                    "path": "assets/images/wizard_attack_e.png"
                 },
                 {
-                    "name": "wizard_2_die1",
-                    "path": "assets/images/wizard_2_die1.png"
+                    "name": "wizard_die1",
+                    "path": "assets/images/wizard_die1.png"
                 },
                 {
-                    "name": "wizard_2_die2",
-                    "path": "assets/images/wizard_2_die2.png"
+                    "name": "wizard_die2",
+                    "path": "assets/images/wizard_die2.png"
                 },
                 {
-                    "name": "wizard_2_run",
-                    "path": "assets/images/wizard_2_run.png"
+                    "name": "wizard_hit",
+                    "path": "assets/images/wizard_hit.png"
+                },
+                {
+                    "name": "wizard_run",
+                    "path": "assets/images/wizard_run.png"
                 },
                 {
                     "name": "wizard_attack_vfx_e_impact",
@@ -242,6 +246,18 @@ window.onload = () => {
                     "path": "assets/images/troll_die.png"
                 },
                 {
+                    "name": "light1",
+                    "path": "assets/images/light1.png"
+                },
+                {
+                    "name": "light2",
+                    "path": "assets/images/light2.png"
+                },
+                {
+                    "name": "light3",
+                    "path": "assets/images/light3.png"
+                },
+                {
                     "name": "moving_platform",
                     "path": "assets/images/moving_platform.png"
                 },
@@ -302,12 +318,20 @@ window.onload = () => {
                     "path": "assets/images/zone5_castle1.png"
                 },
                 {
+                    "name": "zone5_castle2",
+                    "path": "assets/images/zone5_castle2.png"
+                },
+                {
+                    "name": "zone5_castle3",
+                    "path": "assets/images/zone5_castle3.png"
+                },
+                {
                     "name": "zone6",
                     "path": "assets/images/zone6.png"
                 },
                 {
-                    "name": "zone6_castle",
-                    "path": "assets/images/zone6_castle.png"
+                    "name": "zone6_castle1",
+                    "path": "assets/images/zone6_castle1.png"
                 },
             ],
             "sounds": [
