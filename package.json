@@ -32,7 +32,8 @@
   },
   "homepage": "http://spollock.ca/save-the-princess/",
   "dependencies": {
-    "electron-updater": "^4.0.0"
+    "electron-updater": "^4.0.0",
+    "git-cz": "^3.2.1"
   },
   "devDependencies": {
     "commitizen": "*",
