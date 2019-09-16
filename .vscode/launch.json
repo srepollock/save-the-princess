@@ -10,7 +10,7 @@
                 "run-script",
                 "build"
             ],
-            "port": 9229
+            "port": 9223
         },
         {
             "type": "node",

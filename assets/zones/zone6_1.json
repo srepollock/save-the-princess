@@ -1,0 +1,314 @@
+{
+    "name": "zone6_1",
+    "description": "Gideon battles the Evil Wizard Acbarin",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": -190,
+                    "y": -160
+                },
+                "scale": {
+                    "x": 10,
+                    "y": 8
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "zone6_castle1",
+                    "type": "sprite",
+                    "materialName": "zone6_castle1",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "zone6sound",
+                "type": "sound",
+                "soundName": "evilcastle"
+            }]
+        },
+        {
+            "name": "leftboundary",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "leftboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "rightboundary",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "rightboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 580
+                },
+                "scale": {
+                    "x": 800,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 10000,
+                        "height": 1,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "flag",
+            "transform": {
+                "position": {
+                    "x": 750,
+                    "y": 470
+                },
+                "scale": {
+                    "x": 0.4,
+                    "y": 0.4
+                }
+            },
+            "children": [
+                {
+                    "name": "Inner object",
+                    "transform": {
+                        "position": {
+                            "x": 30,
+                            "y": 30
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                        "name": "flagcollision",
+                        "type": "collision",
+                        "shape": {
+                            "type": "rectangle",
+                            "width": 5,
+                            "height": 5
+                        },
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }],
+                    "behaviours": []
+                }
+            ],
+            "components": [{
+                    "name": "flag",
+                    "type": "sprite",
+                    "materialName": "flag"
+                    }],
+            "behaviours": [{
+                    "name": "flagbehaviour",
+                    "type": "flag",
+                    "zoneName": "titlescreen",
+                    "playerCollisionComponent": "playercollision",
+                    "flagCollisionComponent": "flagcollision"
+                },
+                {
+                    "name": "flagrotation",
+                    "type": "rotation",
+                    "rotation": {
+                        "z": 0.01
+                    }
+                }
+            ]
+        },
+        {
+            "name": "chandelier1",
+            "transform": {
+                "position": {
+                    "x": 185,
+                    "y": 400
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "light3",
+                    "type": "animatedsprite",
+                    "materialName": "light3",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 5,
+                    "frameSequence": [0, 1, 2, 3, 4]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "chandelier2",
+            "transform": {
+                "position": {
+                    "x": 442,
+                    "y": 400
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "light3",
+                    "type": "animatedsprite",
+                    "materialName": "light3",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 5,
+                    "frameSequence": [0, 1, 2, 3, 4]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "chandelier3",
+            "transform": {
+                "position": {
+                    "x": 707,
+                    "y": 400
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "light3",
+                    "type": "animatedsprite",
+                    "materialName": "light3",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 5,
+                    "frameSequence": [0, 1, 2, 3, 4]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "wizard",
+            "transform": {
+                "position": {
+                    "x": 780,
+                    "y": 420
+                },
+                "rotation": {
+                    "y": 3.14159
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wizardsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wizard_run",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "player",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 4,
+                    "frameSequence": [0, 1, 2, 1],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "playercollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 45,
+                        "height": 50
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "playercontroller",
+                "type": "player",
+                "animatedSpriteName": "peasentsprite",
+                "attackSpriteName": "peasent_attack",
+                "dieSpriteName": "peasent_die",
+                "hitSpriteName": "peasent_hit",
+                "walkSpriteName": "peasent_walk",
+                "idleSpriteName": "peasent_idle",
+                "jumpSpriteName": "peasent_jump",
+                "playerCollisionComponent": "playercollision",
+                "groundCollisionComponent": "groundcollision",
+                "enemyCollisionComponent": "enemycollision",
+                "flagCollisionComponent": "flagcollision"
+            }]
+        }
+    ]
+}

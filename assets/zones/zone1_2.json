@@ -19,7 +19,7 @@
             "components": [{
                     "name": "background_zone1",
                     "type": "sprite",
-                    "materialName": "zone1_forest",
+                    "materialName": "zone1_plains",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -48,7 +48,7 @@
             "components": [{
                     "name": "background_zone1",
                     "type": "sprite",
-                    "materialName": "zone1_forest",
+                    "materialName": "zone1_plains",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -58,10 +58,54 @@
             "behaviours": []
         },
         {
-            "name": "ground",
+            "name": "leftboundary",
             "transform": {
                 "position": {
                     "x": 0,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "leftboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "rightboundary",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "rightboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground",
+            "transform": {
+                "position": {
+                    "x": -20,
                     "y": 580
                 },
                 "scale": {
@@ -76,7 +120,7 @@
                     "shape": {
                         "type": "rectangle",
                         "width": 1000,
-                        "height": 1,
+                        "height": 20,
                         "origin": {
                             "x": 0,
                             "y": 0
@@ -98,22 +142,37 @@
                     "y": 0.4
                 }
             },
-            "children": [],
+            "children": [
+                {
+                    "name": "Inner object",
+                    "transform": {
+                        "position": {
+                            "x": 30,
+                            "y": 30
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                        "name": "flagcollision",
+                        "type": "collision",
+                        "shape": {
+                            "type": "rectangle",
+                            "width": 5,
+                            "height": 5
+                        },
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }],
+                    "behaviours": []
+                }
+            ],
             "components": [{
                     "name": "flag",
                     "type": "sprite",
                     "materialName": "flag"
-                },
-                {
-                    "name": "flagcollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 10,
-                        "height": 10
-                    }
-                }
-            ],
+            }],
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
@@ -180,11 +239,11 @@
                 "idleSpriteName": "wolf_walk",
                 "jumpSpriteName": "wolf_walk",
                 "start": {
-                    "x": 700,
+                    "x": -100,
                     "y": 500
                 },
                 "end": {
-                    "x": -100,
+                    "x": 700,
                     "y": 500
                 },
                 "direction": {
@@ -245,11 +304,11 @@
                 "idleSpriteName": "wolf_walk",
                 "jumpSpriteName": "wolf_walk",
                 "start": {
-                    "x": 900,
+                    "x": -100,
                     "y": 500
                 },
                 "end": {
-                    "x": -100,
+                    "x": 900,
                     "y": 500
                 },
                 "direction": {
@@ -310,11 +369,11 @@
                 "idleSpriteName": "wolf_walk",
                 "jumpSpriteName": "wolf_walk",
                 "start": {
-                    "x": 1200,
+                    "x": -100,
                     "y": 500
                 },
                 "end": {
-                    "x": -100,
+                    "x": 1200,
                     "y": 500
                 },
                 "direction": {

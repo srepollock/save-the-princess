@@ -1,7 +1,37 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
+import { ipcRenderer } from 'electron';
+let version = document.getElementById('version')!;
+let notification = document.getElementById('notification')!;
+let message = document.getElementById('message')!;
+let restartButton = document.getElementById('restart-button')!;
+
 import * as divine from "divine-engine";
+
+ipcRenderer.send('app_version');
+ipcRenderer.on('app_version', (event: any, arg: any) => {
+    ipcRenderer.removeAllListeners('app_version');
+    version.innerText = 'Version ' + arg.version;
+});
+
+ipcRenderer.on('update_available', () => {
+    ipcRenderer.removeAllListeners('update_available');
+    message.innerText = 'A new update is available. Downloading now...';
+    notification.classList.remove('hidden');
+});
+ipcRenderer.on('update_downloaded', () => {
+    ipcRenderer.removeAllListeners('update_downloaded');
+    message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+    restartButton.classList.remove('hidden');
+    notification.classList.remove('hidden');
+});
+function closeNotification() {
+    notification.classList.add('hidden');
+}
+function restartApp() {
+    ipcRenderer.send('restart_app');
+}
 window.onload = () => {
     process.env.NODE_DEBUG = "true";
     divine.Engine.start({
@@ -16,8 +46,12 @@ window.onload = () => {
                     "path": "assets/images/cursor.png"
                 },
                 {
-                    "name": "outsidetheboxlogo",
-                    "path": "assets/images/outsidetheboxlogo.png"
+                    "name": "spacedragonstudios",
+                    "path": "assets/images/spacedragonstudios.png"
+                },
+                {
+                    "name": "deathscreen",
+                    "path": "assets/images/deathscreen.png"
                 },
                 {
                     "name": "debug",
@@ -68,6 +102,10 @@ window.onload = () => {
                     "path": "assets/images/knight_walk.png"
                 },
                 {
+                    "name": "menubutton",
+                    "path": "assets/images/menubutton.png"
+                },
+                {
                     "name": "peasent_attack",
                     "path": "assets/images/peasent_attack.png"
                 },
@@ -116,20 +154,24 @@ window.onload = () => {
                     "path": "assets/images/village_sequence.png"
                 },
                 {
-                    "name": "wizard_2_attack_e",
-                    "path": "assets/images/wizard_2_attack_e.png"
+                    "name": "wizard_attack_e",
+                    "path": "assets/images/wizard_attack_e.png"
                 },
                 {
-                    "name": "wizard_2_die1",
-                    "path": "assets/images/wizard_2_die1.png"
+                    "name": "wizard_die1",
+                    "path": "assets/images/wizard_die1.png"
                 },
                 {
-                    "name": "wizard_2_die2",
-                    "path": "assets/images/wizard_2_die2.png"
+                    "name": "wizard_die2",
+                    "path": "assets/images/wizard_die2.png"
                 },
                 {
-                    "name": "wizard_2_run",
-                    "path": "assets/images/wizard_2_run.png"
+                    "name": "wizard_hit",
+                    "path": "assets/images/wizard_hit.png"
+                },
+                {
+                    "name": "wizard_run",
+                    "path": "assets/images/wizard_run.png"
                 },
                 {
                     "name": "wizard_attack_vfx_e_impact",
@@ -156,17 +198,141 @@ window.onload = () => {
                     "path": "assets/images/wolf_walk.png"
                 },
                 {
-                    "name": "zone1_forest",
-                    "path": "assets/images/zone1_forest.png"
+                    "name": "lizard_walk",
+                    "path": "assets/images/lizard_walk.png"
                 },
                 {
-                    "name": "zone2_forest_sequence",
-                    "path": "assets/images/zone2_forest_sequence.png"
+                    "name": "lizard_die",
+                    "path": "assets/images/lizard_die.png"
                 },
                 {
-                    "name": "zone4_mountain_sequence",
-                    "path": "assets/images/zone4_mountain_sequence.png"
-                }
+                    "name": "treant_run",
+                    "path": "assets/images/treant_run.png"
+                },
+                {
+                    "name": "treant_die",
+                    "path": "assets/images/treant_die.png"
+                },
+                {
+                    "name": "skeleton_run",
+                    "path": "assets/images/skeleton_run.png"
+                },
+                {
+                    "name": "skeleton_die",
+                    "path": "assets/images/skeleton_die.png"
+                },
+                {
+                    "name": "goblin_walk",
+                    "path": "assets/images/goblin_walk.png"
+                },
+                {
+                    "name": "goblin_die",
+                    "path": "assets/images/goblin_die.png"
+                },
+                {
+                    "name": "orc_walk",
+                    "path": "assets/images/orc_walk.png"
+                },
+                {
+                    "name": "orc_die",
+                    "path": "assets/images/orc_die.png"
+                },
+                {
+                    "name": "troll_attack",
+                    "path": "assets/images/troll_attack.png"
+                },
+                {
+                    "name": "troll_die",
+                    "path": "assets/images/troll_die.png"
+                },
+                {
+                    "name": "light1",
+                    "path": "assets/images/light1.png"
+                },
+                {
+                    "name": "light2",
+                    "path": "assets/images/light2.png"
+                },
+                {
+                    "name": "light3",
+                    "path": "assets/images/light3.png"
+                },
+                {
+                    "name": "moving_platform",
+                    "path": "assets/images/moving_platform.png"
+                },
+                {
+                    "name": "zone1",
+                    "path": "assets/images/zone1.png"
+                },
+                {
+                    "name": "zone1_plains",
+                    "path": "assets/images/zone1_plains.png"
+                },
+                {
+                    "name": "zone2",
+                    "path": "assets/images/zone2.png"
+                },
+                {
+                    "name": "zone2_forest1",
+                    "path": "assets/images/zone2_forest1.png"
+                },
+                {
+                    "name": "zone2_forest2",
+                    "path": "assets/images/zone2_forest2.png"
+                },
+                {
+                    "name": "zone2_forest3",
+                    "path": "assets/images/zone2_forest3.png"
+                },
+                {
+                    "name": "zone3",
+                    "path": "assets/images/zone3.png"
+                },
+                {
+                    "name": "zone3_mountain1",
+                    "path": "assets/images/zone3_mountain1.png"
+                },
+                {
+                    "name": "zone3_mountain2",
+                    "path": "assets/images/zone3_mountain2.png"
+                },
+                {
+                    "name": "zone3_mountain3",
+                    "path": "assets/images/zone3_mountain3.png"
+                },
+                {
+                    "name": "zone4",
+                    "path": "assets/images/zone4.png"
+                },
+                {
+                    "name": "zone4_mountain1",
+                    "path": "assets/images/zone4_mountain1.png"
+                },
+                {
+                    "name": "zone5",
+                    "path": "assets/images/zone5.png"
+                },
+                {
+                    "name": "zone5_castle1",
+                    "path": "assets/images/zone5_castle1.png"
+                },
+                {
+                    "name": "zone5_castle2",
+                    "path": "assets/images/zone5_castle2.png"
+                },
+                {
+                    "name": "zone5_castle3",
+                    "path": "assets/images/zone5_castle3.png"
+                },
+                {
+                    "name": "zone6",
+                    "path": "assets/images/zone6.png"
+                },
+                {
+                    "name": "zone6_castle1",
+                    "path": "assets/images/zone6_castle1.png"
+                },
             ],
             "sounds": [
                 {
@@ -276,6 +442,9 @@ window.onload = () => {
                     "path": "assets/zones/howtoplay.sequence.json"
                 },
                 {
+                    "path": "assets/zones/zone1.sequence.json"
+                },
+                {
                     "path": "assets/zones/zone1_1.json"
                 },
                 {
@@ -283,6 +452,9 @@ window.onload = () => {
                 },
                 {
                     "path": "assets/zones/zone1_3.json"
+                },
+                {
+                    "path": "assets/zones/zone2.sequence.json"
                 },
                 {
                     "path": "assets/zones/zone2_1.json"
@@ -294,6 +466,9 @@ window.onload = () => {
                     "path": "assets/zones/zone2_3.json"
                 },
                 {
+                    "path": "assets/zones/zone3.sequence.json"
+                },
+                {
                     "path": "assets/zones/zone3_1.json"
                 },
                 {
@@ -303,7 +478,13 @@ window.onload = () => {
                     "path": "assets/zones/zone3_3.json"
                 },
                 {
-                    "path": "assets/zones/zone4.json"
+                    "path": "assets/zones/zone4.sequence.json"
+                },
+                {
+                    "path": "assets/zones/zone4_1.json"
+                },
+                {
+                    "path": "assets/zones/zone5.sequence.json"
                 },
                 {
                     "path": "assets/zones/zone5_1.json"
@@ -315,7 +496,16 @@ window.onload = () => {
                     "path": "assets/zones/zone5_3.json"
                 },
                 {
-                    "path": "assets/zones/zone6.json"
+                    "path": "assets/zones/zone6.sequence.json"
+                },
+                {
+                    "path": "assets/zones/zone6_1.json"
+                },
+                {
+                    "path": "assets/zones/credits.sequence.json"
+                },
+                {
+                    "path": "assets/zones/deathscreen.sequence.json"
                 }
             ]
         }

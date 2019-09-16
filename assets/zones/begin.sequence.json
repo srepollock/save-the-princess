@@ -1,6 +1,6 @@
 {
     "name": "beginningsequence",
-    "description": "Princess taken, Gideon introduced",
+    "description": "Princess taken; Gideon introduced",
     "id": "",
     "objects": [
         {
@@ -13,9 +13,9 @@
             },
             "children": [],
             "components": [{
-                    "name": "background_zone1",
+                    "name": "village_sequence",
                     "type": "sprite",
-                    "materialName": "background_zone1"
+                    "materialName": "village_sequence"
                 },
                 {
                     "name": "",
@@ -30,7 +30,7 @@
             "behaviours": []
         },
         {
-            "name": "knight",
+            "name": "knight1",
             "transform": {
                 "position": {
                     "x": 20,
@@ -41,7 +41,109 @@
                     "y": 2
                 }
             },
-            "children": [],
+            "children": [
+                {
+                    "name": "knight2",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "knightsprite",
+                            "type": "sprite",
+                            "materialName": "knight_walk",
+                            "frameHeight": 0,
+                            "frameWidth": 0,
+                            "frameCount": 3,
+                            "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                        }
+                    ],
+                    "behaviours": []
+                },
+                {
+                    "name": "knight2",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "",
+                            "type": "sprite",
+                            "materialName": "",
+                            "frameHeight": 0,
+                            "frameWidth": 0,
+                            "frameCount": 3,
+                            "frameSequence": [0, 1, 2]
+                        },
+                        {
+                            "name": "",
+                            "type": "collision",
+                            "shape": {
+                                "type": "rectangle",
+                                "width": 0,
+                                "height": 0
+                            }
+                        }
+                    ],
+                    "behaviours": [
+                        {
+                            "name": "knight_sequence",
+                            "type": "sequence",
+                            "animatedSpriteName": "orcsprite",
+                            "attackSpriteName": "orc_walk",
+                            "dieSpriteName": "orc_die",
+                            "hitSpriteName": "orc_die",
+                            "walkSpriteName": "orc_walk",
+                            "idleSpriteName": "orc_walk",
+                            "jumpSpriteName": "orc_walk",
+                            "actions": [
+                                {
+                                    "start": {
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "end": {
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "time": 0,
+                                    "skip": true
+                                },
+                                {
+                                    "start": {
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "end": {
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "time": 0,
+                                    "skip": true
+                                },
+                                {
+                                    "start": {
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "end": {
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    "time": 0,
+                                    "skip": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "components": [{
                     "name": "idle",
                     "type": "animatedsprite",
@@ -65,6 +167,70 @@
                 "type": "keyboardmovement",
                 "speed": 1
             }]
+        },
+        {
+            "name": "peasent",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "knightsprite",
+                    "type": "sprite",
+                    "materialName": "knight_walk",
+                    "frameHeight": 0,
+                    "frameWidth": 0,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "peasent_sequence",
+                    "type": "sequence",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "end": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "time": 0,
+                            "skip": true
+                        },
+                        {
+                            "start": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "end": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "time": 0,
+                            "skip": true
+                        },
+                        {
+                            "start": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "end": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "time": 0,
+                            "skip": true
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

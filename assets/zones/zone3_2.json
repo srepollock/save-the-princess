@@ -1,0 +1,555 @@
+{
+    "name": "zone3_2",
+    "description": "Gideon adventures into the mountains",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "zone3_mountain2",
+                    "type": "sprite",
+                    "materialName": "zone3_mountain2",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "zone3sound",
+                "type": "sound",
+                "soundName": "zone3"
+            }]
+        },
+        {
+            "name": "leftboundary",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "leftboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "rightboundary",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 0
+                }
+            },
+            "children": [],
+            "components": [
+                {
+                    "name": "rightboundary",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 20,
+                        "height": 600
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform1",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 430
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 300,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform2",
+            "transform": {
+                "position": {
+                    "x": 380,
+                    "y": 300
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 150,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform3",
+            "transform": {
+                "position": {
+                    "x": 160,
+                    "y": 180
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 160,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "platform4",
+            "transform": {
+                "position": {
+                    "x": 480,
+                    "y": 120
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 230,
+                        "height": 10,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "ground2",
+            "transform": {
+                "position": {
+                    "x": 700,
+                    "y": 580
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "groundcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 200,
+                        "height": 50,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "abyss",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 620
+                },
+                "scale": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "deathcollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 10000,
+                        "height": 1,
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "orc1",
+            "transform": {
+                "position": {
+                    "x": 260,
+                    "y": 380
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "orcsprite",
+                    "type": "animatedsprite",
+                    "materialName": "orc_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "orcsprite",
+                "attackSpriteName": "orc_walk",
+                "dieSpriteName": "orc_die",
+                "hitSpriteName": "orc_die",
+                "walkSpriteName": "orc_walk",
+                "idleSpriteName": "orc_walk",
+                "jumpSpriteName": "orc_walk",
+                "start": {
+                    "x": 0,
+                    "y": 380
+                },
+                "end": {
+                    "x": 260,
+                    "y": 380
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 1
+            }]
+        },
+        {
+            "name": "goblin",
+            "transform": {
+                "position": {
+                    "x": 370,
+                    "y": 260
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "goblinsprite",
+                    "type": "animatedsprite",
+                    "materialName": "goblin_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "goblinsprite",
+                "attackSpriteName": "goblin_walk",
+                "dieSpriteName": "goblin_die",
+                "hitSpriteName": "goblin_die",
+                "walkSpriteName": "goblin_walk",
+                "idleSpriteName": "goblin_walk",
+                "jumpSpriteName": "goblin_walk",
+                "start": {
+                    "x": 320,
+                    "y": 260
+                },
+                "end": {
+                    "x": 480,
+                    "y": 260
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 4
+            }]
+        },
+        {
+            "name": "goblin2",
+            "transform": {
+                "position": {
+                    "x": 170,
+                    "y": 120
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "goblinsprite",
+                    "type": "animatedsprite",
+                    "materialName": "goblin_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "goblinsprite",
+                "attackSpriteName": "goblin_walk",
+                "dieSpriteName": "goblin_die",
+                "hitSpriteName": "goblin_die",
+                "walkSpriteName": "goblin_walk",
+                "idleSpriteName": "goblin_walk",
+                "jumpSpriteName": "goblin_walk",
+                "start": {
+                    "x": 140,
+                    "y": 120
+                },
+                "end": {
+                    "x": 280,
+                    "y": 120
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 4
+            }]
+        },
+        {
+            "name": "flag",
+            "transform": {
+                "position": {
+                    "x": 750,
+                    "y": 470
+                },
+                "scale": {
+                    "x": 0.4,
+                    "y": 0.4
+                }
+            },
+            "children": [
+                {
+                    "name": "Inner object",
+                    "transform": {
+                        "position": {
+                            "x": 30,
+                            "y": 30
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                        "name": "flagcollision",
+                        "type": "collision",
+                        "shape": {
+                            "type": "rectangle",
+                            "width": 5,
+                            "height": 5
+                        },
+                        "origin": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }],
+                    "behaviours": []
+                }
+            ],
+            "components": [{
+                    "name": "flag",
+                    "type": "sprite",
+                    "materialName": "flag"
+                    }],
+            "behaviours": [{
+                    "name": "flagbehaviour",
+                    "type": "flag",
+                    "zoneName": "zone3_3",
+                    "playerCollisionComponent": "playercollision",
+                    "flagCollisionComponent": "flagcollision"
+                },
+                {
+                    "name": "flagrotation",
+                    "type": "rotation",
+                    "rotation": {
+                        "z": 0.01
+                    }
+                }
+            ]
+        },
+        {
+            "name": "player",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 380
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 4,
+                    "frameSequence": [0, 1, 2, 1],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "playercollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 45,
+                        "height": 50
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "playercontroller",
+                "type": "player",
+                "animatedSpriteName": "peasentsprite",
+                "attackSpriteName": "peasent_attack",
+                "dieSpriteName": "peasent_die",
+                "hitSpriteName": "peasent_hit",
+                "walkSpriteName": "peasent_walk",
+                "idleSpriteName": "peasent_idle",
+                "jumpSpriteName": "peasent_jump",
+                "playerCollisionComponent": "playercollision",
+                "groundCollisionComponent": "groundcollision",
+                "enemyCollisionComponent": "enemycollision",
+                "flagCollisionComponent": "flagcollision",
+                "deathCollisionComponent": "deathcollision"
+            }]
+        }
+    ]
+}

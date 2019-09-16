@@ -12,9 +12,9 @@
             },
             "children": [],
             "components": [{
-                    "name": "outsidetheboxlogo",
+                    "name": "spacedragonstudios",
                     "type": "sprite",
-                    "materialName": "outsidetheboxlogo",
+                    "materialName": "spacedragonstudios",
                     "origin": {
                         "x": 0,
                         "y": 0
