@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 import {app, BrowserWindow, ipcMain} from "electron";
 import {autoUpdater} from "electron-updater";
+import * as path from "path";
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -36,6 +37,17 @@ function createWindow() {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = undefined;
+  });
+
+  mainWindow.once('ready-to-show', () => {
+    Electron.protocol.interceptFileProtocol('file', (request: any, callback: any) => {
+        const filePath = request.url.replace('file://', '');
+        const url = request.url.includes('assets/') ? path.normalize(`${__dirname}/${filePath}`) : filePath;
+  
+        callback({ path: url });
+    }, (err: any) => {
+        if (err) console.error('Failed to register protocol');
+    });
   });
 }
 

@@ -1,77 +1,98 @@
 {
-  "name": "save-the-princess",
-  "version": "0.0.2",
-  "description": "Save the Princess built on the Divine Engine.",
-  "main": "main.js",
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf ./dist",
-    "commit": "git add --all && git-cz; git push",
-    "local-dist": "npm run build; electron-builder -mw --publish never",
-    "dist": "electron-builder -mw --publish always",
-    "postinstall": "electron-builder install-app-deps",
-    "release": "standard-version",
-    "start": "npm run build; electron .",
-    "watch": "tsc --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/srepollock/save-the-princess.git"
-  },
-  "keywords": [
-    "typescript",
-    "nodejs",
-    "commitizen",
-    "semantic-release",
-    "electron"
-  ],
-  "author": "Spencer Pollock <spencer@spollock.ca>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/srepollock/save-the-princess/issues"
-  },
-  "homepage": "http://spollock.ca/save-the-princess/",
-  "dependencies": {
-    "electron-updater": "^4.0.0",
-    "git-cz": "^3.2.1"
-  },
-  "devDependencies": {
-    "commitizen": "*",
-    "cz-conventional-changelog": "*",
-    "electron": "^6.0.9",
-    "electron-builder": "*",
-    "standard-version": "*",
-    "typescript": "*"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "build": {
-    "productName": "SaveThePrincess",
-    "appId": "com.electron.savetheprincess",
-    "files": [
-      "main.js",
-      "renderer.js",
-      "index.html"
+    "name": "save-the-princess",
+    "version": "0.0.2",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -rf ./dist",
+        "commit": "git add --all && git-cz; git push",
+        "local-dist": "npm run build; electron-builder -mw --publish never",
+        "dist": "electron-builder -mw --publish always",
+        "postinstall": "electron-builder install-app-deps",
+        "release": "standard-version",
+        "start": "npm run build; electron .",
+        "watch": "tsc --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/srepollock/save-the-princess.git"
+    },
+    "keywords": [
+        "typescript",
+        "nodejs",
+        "commitizen",
+        "semantic-release",
+        "electron"
     ],
-    "extraResources": [
-      {
-        "from": "assets",
-        "to": "../assets",
-        "filter": "*.(wav|mp3|json|png)"
-      }
-    ],
-    "publish": {
-      "provider": "github",
-      "publishAutoUpdate": true
+    "author": "Spencer Pollock <spencer@spollock.ca>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/srepollock/save-the-princess/issues"
+    },
+    "homepage": "http://spollock.ca/save-the-princess/",
+    "dependencies": {
+        "divine-engine": "^0.4.1",
+        "electron-updater": "^4.0.0"
+    },
+    "devDependencies": {
+        "commitizen": "*",
+        "cz-conventional-changelog": "*",
+        "electron": "^6.0.9",
+        "electron-builder": "*",
+        "git-cz": "^3.2.1",
+        "standard-version": "*",
+        "typescript": "*"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "build": {
+        "appId": "com.electron.save-the-princess",
+        "copyright": "Copyright © 2019 Spencer Pollock <spencer@spollock.ca>",
+        "productName": "save-the-princess",
+        "electronVersion": "6.0.9",
+        "asar": true,
+        "directories": {
+            "app": "/Users/Spencer/Documents/git/de-electron-latest",
+            "output": "dist"
+        },
+        "mac": {
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "icon": "assets/savetheprincessappicon.png",
+            "extraResources": [
+                {
+                    "from": "assets/*",
+                    "to": "../assets/",
+                    "filter": "*.(wav|mp3|json|png)"
+                }
+            ]
+        },
+        "win": {
+            "target": "nsis",
+            "icon": "assets/savetheprincessappicon.png",
+            "extraResources": [
+                {
+                    "from": "assets/*",
+                    "to": "../assets/",
+                    "filter": "*.(wav|mp3|json|png)"
+                }
+            ]
+        }
+    },
+    "release": {
+        "plubins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator"
+        ]
     }
-  },
-  "release": {
-    "plubins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator"
-    ]
-  }
 }
