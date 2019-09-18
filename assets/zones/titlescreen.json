@@ -85,7 +85,7 @@
                         {
                             "name": "playbutton",
                             "type": "guibutton",
-                            "zoneName": "zone1_1"
+                            "zoneName": "begin.sequence"
                         }
                     ]
                 },

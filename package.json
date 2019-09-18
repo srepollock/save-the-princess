@@ -32,7 +32,6 @@
     },
     "homepage": "http://spollock.ca/save-the-princess/",
     "dependencies": {
-        "divine-engine": "^0.4.1",
         "electron-updater": "^4.0.0"
     },
     "devDependencies": {
