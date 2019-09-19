@@ -1,0 +1,250 @@
+{
+    "name": "boss_wizard.sequence",
+    "description": "Wizard battle sequence.",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "backgroundsprite",
+                    "type": "sprite",
+                    "materialName": "zone6_castle1",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [
+                
+            ]
+        },
+        {
+            "name": "wizard",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 420
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wizardsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wizard_idle",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "wizard_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "wizardsprite",
+                    "attackSpriteName": "wizard_attack",
+                    "dieSpriteName": "wizard_die",
+                    "hitSpriteName": "wizard_hit",
+                    "walkSpriteName": "wizard_run",
+                    "idleSpriteName": "wizard_idle",
+                    "jumpSpriteName": "wizard_idle",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 420
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 420
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 420
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 420
+                            },
+                            "time": 5
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 420
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 550
+                            },
+                            "time": 7
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 550
+                            },
+                            "end": {
+                                "x": 550,
+                                "y": 550
+                            },
+                            "time": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "princess",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 520
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "princesssprite",
+                    "type": "sprite",
+                    "materialName": "princess_idle",
+                    "frameHeight": 0,
+                    "frameWidth": 0,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "princesssequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "princesssprite",
+                    "attackSpriteName": "princess_walk",
+                    "dieSpriteName": "princess_walk",
+                    "hitSpriteName": "princess_walk",
+                    "walkSpriteName": "princess_walk",
+                    "idleSpriteName": "princess_idle",
+                    "jumpSpriteName": "princess_idle",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 780,
+                                "y": 520
+                            },
+                            "time": 5
+                        },
+                        {
+                            "start": {
+                                "x": 780,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 550,
+                                "y": 520
+                            },
+                            "time": 12
+                        },
+                        {
+                            "start": {
+                                "x": 550,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 520
+                            },
+                            "time": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "peasent",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 445
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "peasent_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "peasentsprite",
+                    "attackSpriteName": "peasent_walk",
+                    "dieSpriteName": "peasent_walk",
+                    "hitSpriteName": "peasent_walk",
+                    "walkSpriteName": "peasent_walk",
+                    "idleSpriteName": "peasent_walk",
+                    "jumpSpriteName": "peasent_jump",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": -50,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 200,
+                                "y": 520
+                            },
+                            "time": 2
+                        },
+                        {
+                            "start": {
+                                "x": 200,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 200,
+                                "y": 520
+                            },
+                            "time": 20
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -26,7 +26,23 @@
                     }
                 }
             ],
-            "behaviours": []
+            "behaviours": [
+                {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "nextScene"
+                        }
+                    ]
+                },
+                {
+                    "name": "beginningsequencesound",
+                    "type": "sound",
+                    "soundName": "village_sound"
+                }
+            ]
         },
         {
             "name": "knight1",
@@ -117,8 +133,7 @@
                                 "x": 550,
                                 "y": 445
                             },
-                            "time": 3,
-                            "skip": true
+                            "time": 9
                         },
                         {
                             "start": {
@@ -129,8 +144,7 @@
                                 "x": 550,
                                 "y": 445
                             },
-                            "time": 15,
-                            "skip": true
+                            "time": 18
                         },
                         {
                             "start": {
@@ -141,8 +155,7 @@
                                 "x": 825,
                                 "y": 445
                             },
-                            "time": 6,
-                            "skip": true
+                            "time": 3
                         }
                     ]
                 }
@@ -192,8 +205,7 @@
                                 "x": 350,
                                 "y": 445
                             },
-                            "time": 3,
-                            "skip": true
+                            "time": 6
                         },
                         {
                             "start": {
@@ -204,8 +216,7 @@
                                 "x": 350,
                                 "y": 445
                             },
-                            "time": 12,
-                            "skip": true
+                            "time": 18
                         },
                         {
                             "start": {
@@ -213,11 +224,85 @@
                                 "y": 445
                             },
                             "end": {
-                                "x": 825,
+                                "x": 850,
                                 "y": 445
                             },
-                            "time": 5,
-                            "skip": true
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 445
+                            },
+                            "time": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "dialog",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 250
+                },
+                "scale": {
+                    "x": 4,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "dialogsprite",
+                    "type": "sprite",
+                    "materialName": "debug"
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "dialogsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "begin_k1",
+                            "startTime": 3,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k2",
+                            "startTime": 6,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k3",
+                            "startTime": 9,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_g1",
+                            "startTime": 12,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k4",
+                            "startTime": 15,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k5",
+                            "startTime": 18,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k6",
+                            "startTime": 21,
+                            "duration": 3
                         }
                     ]
                 }

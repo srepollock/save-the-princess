@@ -162,12 +162,12 @@
                     },
                     {
                         "listen": "KEY_DOWN",
-                        "key": 38,
+                        "key": 87,
                         "response": "moveCursorUp"
                     },
                     {
                         "listen": "KEY_DOWN",
-                        "key": 40,
+                        "key": 83,
                         "response": "moveCursorDown"
                     }
                 ]

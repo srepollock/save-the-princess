@@ -1,0 +1,140 @@
+{
+    "name": "zone3",
+    "description": "Page announcing zone 3",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "zone3",
+                    "type": "sprite",
+                    "materialName": "zone3",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "titlemenu",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 300
+                }
+            },
+            "children": [
+                {
+                    "name": "cursor",
+                    "transform": {
+                        "position": {
+                            "x": 200,
+                            "y": 290
+                        },
+                        "scale": {
+                            "x": 0.3,
+                            "y": 0.3
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "cursor",
+                            "type": "sprite",
+                            "materialName": "cursor"
+                        }
+                    ],
+                    "behaviours": []
+                },
+                {
+                    "name": "playbutton",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 260
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 0.4
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "playbuttonsprite",
+                            "type": "sprite",
+                            "materialName": "play"
+                        }
+                    ],
+                    "behaviours": [
+                        {
+                            "name": "playbutton",
+                            "type": "guibutton",
+                            "zoneName": "zone3_1"
+                        }
+                    ]
+                },
+                {
+                    "name": "menubutton",
+                    "transform": {
+                        "position": {
+                            "x": 0,
+                            "y": 320
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 0.4
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "menubuttonsprite",
+                            "type": "sprite",
+                            "materialName": "menubutton"
+                        }
+                    ],
+                    "behaviours": [
+                        {
+                            "name": "menubutton",
+                            "type": "guibutton",
+                            "zoneName": "titlescreen"
+                        }
+                    ]
+                }
+            ],
+            "components": [],
+            "behaviours": [{
+                "name": "titlemenu",
+                "type": "guibehaviour",
+                "cursor": "cursor",
+                "buttons": [
+                    "playbutton",
+                    "menubutton"
+                ],
+                "actions": [
+                    {
+                        "listen": "KEY_DOWN",
+                        "key": 90,
+                        "response": "cursorSelect"
+                    },
+                    {
+                        "listen": "KEY_DOWN",
+                        "key": 38,
+                        "response": "moveCursorUp"
+                    },
+                    {
+                        "listen": "KEY_DOWN",
+                        "key": 40,
+                        "response": "moveCursorDown"
+                    }
+                ]
+            }]
+        }
+    ]
+}

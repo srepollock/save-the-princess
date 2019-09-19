@@ -174,6 +174,14 @@ window.onload = () => {
                     "path": "assets/images/wizard_run.png"
                 },
                 {
+                    "name": "wizard_idle",
+                    "path": "assets/images/wizard_idle.png"
+                },
+                {
+                    "name": "wizard_jump",
+                    "path": "assets/images/wizard_jump.png"
+                },
+                {
                     "name": "wizard_attack_vfx_e_impact",
                     "path": "assets/images/wizard_attack_vfx_e_impact.png"
                 },
@@ -245,6 +253,36 @@ window.onload = () => {
                     "name": "troll_die",
                     "path": "assets/images/troll_die.png"
                 },
+                // Dialogs
+                {
+                    "name": "begin_k1",
+                    "path": "assets/images/begin_k1.png"
+                },
+                {
+                    "name": "begin_k2",
+                    "path": "assets/images/begin_k2.png"
+                },
+                {
+                    "name": "begin_k3",
+                    "path": "assets/images/begin_k3.png"
+                },
+                {
+                    "name": "begin_k4",
+                    "path": "assets/images/begin_k4.png"
+                },
+                {
+                    "name": "begin_k5",
+                    "path": "assets/images/begin_k5.png"
+                },
+                {
+                    "name": "begin_k6",
+                    "path": "assets/images/begin_k6.png"
+                },
+                {
+                    "name": "begin_g1",
+                    "path": "assets/images/begin_g1.png"
+                },
+                // Backgrounds/environment
                 {
                     "name": "light1",
                     "path": "assets/images/light1.png"
@@ -345,7 +383,8 @@ window.onload = () => {
                 },
                 {
                     "name": "credits",
-                    "path": "assets/sounds/credits.mp3"
+                    "path": "assets/sounds/credits.mp3",
+                    "loop": true
                 },
                 {
                     "name": "death",
@@ -357,7 +396,8 @@ window.onload = () => {
                 },
                 {
                     "name": "dragonbosstheme",
-                    "path": "assets/sounds/dragonbosstheme.mp3"
+                    "path": "assets/sounds/dragonbosstheme.mp3",
+                    "loop": true
                 },
                 {
                     "name": "dragonshout",
@@ -369,7 +409,8 @@ window.onload = () => {
                 },
                 {
                     "name": "evilcastle",
-                    "path": "assets/sounds/evilcastle.mp3"
+                    "path": "assets/sounds/evilcastle.mp3",
+                    "loop": true
                 },
                 {
                     "name": "fire",
@@ -381,7 +422,8 @@ window.onload = () => {
                 },
                 {
                     "name": "maintheme",
-                    "path": "assets/sounds/maintheme.mp3"
+                    "path": "assets/sounds/maintheme.mp3",
+                    "loop": true
                 },
                 {
                     "name": "playerattack",
@@ -405,7 +447,8 @@ window.onload = () => {
                 },
                 {
                     "name": "wizardbosstheme",
-                    "path": "assets/sounds/wizardbosstheme.mp3"
+                    "path": "assets/sounds/wizardbosstheme.mp3",
+                    "loop": true
                 },
                 {
                     "name": "wizardshot",
@@ -413,20 +456,28 @@ window.onload = () => {
                 },
                 {
                     "name": "zone1",
-                    "path": "assets/sounds/zone1.mp3"
+                    "path": "assets/sounds/zone1.mp3",
+                    "loop": true
                 },
                 {
                     "name": "zone2",
-                    "path": "assets/sounds/zone2.mp3"
+                    "path": "assets/sounds/zone2.mp3",
+                    "loop": true
                 },
                 {
                     "name": "zone3",
-                    "path": "assets/sounds/zone3.mp3"
+                    "path": "assets/sounds/zone3.mp3",
+                    "loop": true
                 },
                 {
                     "name": "zonecomplete",
                     "path": "assets/sounds/zonecomplete.wav"
-                }
+                },
+                {
+                    "name": "village_sound",
+                    "path": "assets/sounds/village_sound.wav",
+                    "loop": true
+                },
             ],
             "zones": [
                 {
@@ -436,13 +487,13 @@ window.onload = () => {
                     "path": "assets/zones/titlescreen.json"
                 },
                 {
-                    "path": "assets/zones/begin.sequence.json"
-                },
-                {
                     "path": "assets/zones/howtoplay.sequence.json"
                 },
                 {
-                    "path": "assets/zones/zone1.sequence.json"
+                    "path": "assets/zones/begin.sequence.json"
+                },
+                {
+                    "path": "assets/zones/zone1.json"
                 },
                 {
                     "path": "assets/zones/zone1_1.json"
@@ -454,7 +505,7 @@ window.onload = () => {
                     "path": "assets/zones/zone1_3.json"
                 },
                 {
-                    "path": "assets/zones/zone2.sequence.json"
+                    "path": "assets/zones/zone2.json"
                 },
                 {
                     "path": "assets/zones/zone2_1.json"
@@ -466,7 +517,7 @@ window.onload = () => {
                     "path": "assets/zones/zone2_3.json"
                 },
                 {
-                    "path": "assets/zones/zone3.sequence.json"
+                    "path": "assets/zones/zone3.json"
                 },
                 {
                     "path": "assets/zones/zone3_1.json"
@@ -478,13 +529,16 @@ window.onload = () => {
                     "path": "assets/zones/zone3_3.json"
                 },
                 {
-                    "path": "assets/zones/zone4.sequence.json"
+                    "path": "assets/zones/zone4.json"
+                },
+                {
+                    "path": "assets/zones/boss_dragon.sequence.json"
                 },
                 {
                     "path": "assets/zones/zone4_1.json"
                 },
                 {
-                    "path": "assets/zones/zone5.sequence.json"
+                    "path": "assets/zones/zone5.json"
                 },
                 {
                     "path": "assets/zones/zone5_1.json"
@@ -496,7 +550,10 @@ window.onload = () => {
                     "path": "assets/zones/zone5_3.json"
                 },
                 {
-                    "path": "assets/zones/zone6.sequence.json"
+                    "path": "assets/zones/zone6.json"
+                },
+                {
+                    "path": "assets/zones/boss_wizard.sequence.json"
                 },
                 {
                     "path": "assets/zones/zone6_1.json"

@@ -1,7 +1,6 @@
 {
-    "name": "howtoplay",
+    "name": "howtoplay.sequence",
     "description": "Shows the user how to play the game",
-    "id": "",
     "objects": [
         {
             "name": "background",
@@ -12,22 +11,14 @@
                 }
             },
             "children": [],
-            "components": [{
-                    "name": "background_zone1",
-                    "type": "sprite",
-                    "materialName": "background_zone1"
-                },
+            "components": [],
+            "behaviours": [
                 {
-                    "name": "",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "howtoplaysound",
+                    "type": "sound",
+                    "soundName": "howtoplay"
                 }
-            ],
-            "behaviours": []
+            ]
         },
         {
             "name": "player",

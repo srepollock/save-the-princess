@@ -1,0 +1,31 @@
+{
+    "name": "credits.sequence",
+    "description": "Game credits",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [
+                
+            ],
+            "components": [{
+                    "name": "credits",
+                    "type": "sprite",
+                    "materialName": "credit1",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [
+                
+            ]
+        }
+    ]
+}
