@@ -275,8 +275,8 @@ window.onload = () => {
                     "path": "assets/images/movement_banner.png"
                 },
                 {
-                    "name": "enter_banner",
-                    "path": "assets/images/enter_banner.png"
+                    "name": "select_banner",
+                    "path": "assets/images/select_banner.png"
                 },
                 {
                     "name": "begin_k1",

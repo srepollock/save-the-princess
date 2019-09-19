@@ -76,7 +76,7 @@
                             "duration": 5
                         },
                         {
-                            "materialName": "enter_banner",
+                            "materialName": "select_banner",
                             "startTime": 20,
                             "duration": 5
                         }
