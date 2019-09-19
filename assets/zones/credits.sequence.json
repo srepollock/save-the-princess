@@ -5,18 +5,20 @@
         {
             "name": "background",
             "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 300
+                },
                 "scale": {
                     "x": 8,
                     "y": 6
                 }
             },
-            "children": [
-                
-            ],
+            "children": [],
             "components": [{
-                    "name": "credits",
+                    "name": "creditsprite",
                     "type": "sprite",
-                    "materialName": "credit1",
+                    "materialName": "debug",
                     "origin": {
                         "x": 0,
                         "y": 0
@@ -24,7 +26,78 @@
                 }
             ],
             "behaviours": [
-                
+                {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "titlescreen"
+                        }
+                    ]
+                },
+                {
+                    "name": "creditsequencesound",
+                    "type": "sound",
+                    "soundName": "credits"
+                },
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "creditsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "credit1",
+                            "startTime": 0,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit2",
+                            "startTime": 6,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit3",
+                            "startTime": 12,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "credit4",
+                            "startTime": 18,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit5",
+                            "startTime": 24,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit6",
+                            "startTime": 30,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit7",
+                            "startTime": 36,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit8",
+                            "startTime": 42,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit9",
+                            "startTime": 48,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "credit10",
+                            "startTime": 54,
+                            "duration": 6
+                        }
+                    ]
+                }
             ]
         }
     ]

@@ -15,14 +15,15 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Image json object": {
-		"scope": "typescript",
-		"prefix": "imageobject",
+	"Dialog object": {
+		"scope": "json",
+		"prefix": "dialogbox",
 		"body": [
 			"{",
-				"\t\"name\": \"$1\",",
-				"\t\"path\": \"assets/images/$2.png\"",
-			"},",
+			"\t\"materialName\": \"$1\",",
+			"\t\"startTime\": $2,",
+			"\t\"duration\": $3",
+			"},"
 		]
 	}
 }

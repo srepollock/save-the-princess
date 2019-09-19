@@ -259,6 +259,26 @@ window.onload = () => {
                 },
                 // Dialogs
                 {
+                    "name": "attack_banner",
+                    "path": "assets/images/attack_banner.png"
+                },
+                {
+                    "name": "jump_banner",
+                    "path": "assets/images/jump_banner.png"
+                },
+                {
+                    "name": "howtoplay_banner",
+                    "path": "assets/images/howtoplay_banner.png"
+                },
+                {
+                    "name": "movement_banner",
+                    "path": "assets/images/movement_banner.png"
+                },
+                {
+                    "name": "enter_banner",
+                    "path": "assets/images/enter_banner.png"
+                },
+                {
                     "name": "begin_k1",
                     "path": "assets/images/begin_k1.png"
                 },
@@ -414,6 +434,47 @@ window.onload = () => {
                 {
                     "name": "zone6_castle1",
                     "path": "assets/images/zone6_castle1.png"
+                },
+                // Credits
+                {
+                    "name": "credit1",
+                    "path": "assets/images/credit1.png"
+                },
+                {
+                    "name": "credit2",
+                    "path": "assets/images/credit2.png"
+                },
+                {
+                    "name": "credit3",
+                    "path": "assets/images/credit3.png"
+                },
+                {
+                    "name": "credit4",
+                    "path": "assets/images/credit4.png"
+                },
+                {
+                    "name": "credit5",
+                    "path": "assets/images/credit5.png"
+                },
+                {
+                    "name": "credit6",
+                    "path": "assets/images/credit6.png"
+                },
+                {
+                    "name": "credit7",
+                    "path": "assets/images/credit7.png"
+                },
+                {
+                    "name": "credit8",
+                    "path": "assets/images/credit8.png"
+                },
+                {
+                    "name": "credit9",
+                    "path": "assets/images/credit9.png"
+                },
+                {
+                    "name": "credit10",
+                    "path": "assets/images/credit10.png"
                 },
             ],
             "sounds": [

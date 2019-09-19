@@ -37,9 +37,9 @@
                     ]
                 },
                 {
-                    "name": "beginningsequencesound",
+                    "name": "princessmusic",
                     "type": "sound",
-                    "soundName": "village_sound"
+                    "soundName": "princessmusic"
                 }
             ]
         },
