@@ -42,8 +42,8 @@
                     "y": 400
                 },
                 "scale": {
-                    "x": 1.5,
-                    "y": 1.5
+                    "x": 2,
+                    "y": 2
                 }
             },
             "children": [],
@@ -82,7 +82,7 @@
                                 "x": 700,
                                 "y": 400
                             },
-                            "time": 5
+                            "time": 3
                         },
                         {
                             "start": {
@@ -93,11 +93,22 @@
                                 "x": 700,
                                 "y": 400
                             },
-                            "time": 8
+                            "time": 15
                         },
                         {
                             "start": {
                                 "x": 700,
+                                "y": 400
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 400
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 850,
                                 "y": 400
                             },
                             "end": {
@@ -166,7 +177,7 @@
                                 "x": 700,
                                 "y": -50
                             },
-                            "time": 8
+                            "time": 12
                         },
                         {
                             "start": {
@@ -177,7 +188,18 @@
                                 "x": 700,
                                 "y": 445
                             },
-                            "time": 5
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 445
+                            },
+                            "time": 3
                         },
                         {
                             "start": {
@@ -188,7 +210,7 @@
                                 "x": 600,
                                 "y": 400
                             },
-                            "time": 3
+                            "time": 6
                         }
                     ]
                 }
@@ -218,6 +240,55 @@
                 }
             ],
             "behaviours": []
+        },
+        {
+            "name": "dialog",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 250
+                },
+                "scale": {
+                    "x": 4,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "dialogsprite",
+                    "type": "sprite",
+                    "materialName": "debug"
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "dialogsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "zone4_w1",
+                            "startTime": 3,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "zone4_w2",
+                            "startTime": 6,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "zone4_w3",
+                            "startTime": 9,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "zone4_w4",
+                            "startTime": 15,
+                            "duration": 3
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

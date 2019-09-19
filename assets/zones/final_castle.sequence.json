@@ -1,7 +1,6 @@
 {
-    "name": "boss_wizard.sequence",
-    "description": "Wizard battle sequence.",
-    "id": "",
+    "name": "final_castle.sequence",
+    "description": "Gideon wins; Fryabella and Gideon leave the castle",
     "objects": [
         {
             "name": "background",
@@ -38,148 +37,9 @@
                     ]
                 },
                 {
-                "name": "zone6sound",
-                "type": "sound",
-                "soundName": "evilcastle"
-                }
-            ]
-        },
-        {
-            "name": "chandelier1",
-            "transform": {
-                "position": {
-                    "x": 185,
-                    "y": 400
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "light3",
-                    "type": "animatedsprite",
-                    "materialName": "light3",
-                    "frameHeight": 64,
-                    "frameWidth": 64,
-                    "frameCount": 5,
-                    "frameSequence": [0, 1, 2, 3, 4]
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "chandelier2",
-            "transform": {
-                "position": {
-                    "x": 442,
-                    "y": 400
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "light3",
-                    "type": "animatedsprite",
-                    "materialName": "light3",
-                    "frameHeight": 64,
-                    "frameWidth": 64,
-                    "frameCount": 5,
-                    "frameSequence": [0, 1, 2, 3, 4]
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "chandelier3",
-            "transform": {
-                "position": {
-                    "x": 707,
-                    "y": 400
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "light3",
-                    "type": "animatedsprite",
-                    "materialName": "light3",
-                    "frameHeight": 64,
-                    "frameWidth": 64,
-                    "frameCount": 5,
-                    "frameSequence": [0, 1, 2, 3, 4]
-                }
-            ],
-            "behaviours": []
-        },
-        {
-            "name": "wizard",
-            "transform": {
-                "position": {
-                    "x": 850,
-                    "y": 420
-                },
-                "scale": {
-                    "x": 1.5,
-                    "y": 1.5
-                }
-            },
-            "children": [],
-            "components": [{
-                    "name": "wizardsprite",
-                    "type": "animatedsprite",
-                    "materialName": "wizard_idle",
-                    "frameHeight": 64,
-                    "frameWidth": 64,
-                    "frameCount": 3,
-                    "frameSequence": [0, 1, 2],
-                    "origin": {
-                        "x": 0.5,
-                        "y": 0.5
-                    }
-                }
-            ],
-            "behaviours": [
-                {
-                    "name": "wizard_sequence",
-                    "type": "sequence",
-                    "animatedSpriteName": "wizardsprite",
-                    "attackSpriteName": "wizard_attack",
-                    "dieSpriteName": "wizard_die",
-                    "hitSpriteName": "wizard_hit",
-                    "walkSpriteName": "wizard_run",
-                    "idleSpriteName": "wizard_idle",
-                    "jumpSpriteName": "wizard_idle",
-                    "actions": [
-                        {
-                            "start": {
-                                "x": 850,
-                                "y": 420
-                            },
-                            "end": {
-                                "x": 720,
-                                "y": 422
-                            },
-                            "time": 3
-                        },
-                        {
-                            "start": {
-                                "x": 720,
-                                "y": 422
-                            },
-                            "end": {
-                                "x": 719,
-                                "y": 422
-                            },
-                            "time": 6
-                        },
-                        {
-                            "start": {
-                                "x": 718,
-                                "y": 422
-                            },
-                            "end": {
-                                "x": 710,
-                                "y": 520
-                            },
-                            "time": 3
-                        }
-                    ]
+                    "name": "princessmusic",
+                    "type": "sound",
+                    "soundName": "princessmusic"
                 }
             ]
         },
@@ -199,7 +59,7 @@
             "components": [{
                     "name": "princesssprite",
                     "type": "animatedsprite",
-                    "materialName": "princess_idle",
+                    "materialName": "princess_walk",
                     "frameHeight": 72,
                     "frameWidth": 72,
                     "frameCount": 3,
@@ -224,29 +84,29 @@
                                 "y": 520
                             },
                             "end": {
-                                "x": 780,
+                                "x": 500,
                                 "y": 520
                             },
                             "time": 3
                         },
                         {
                             "start": {
-                                "x": 780,
+                                "x": 500,
                                 "y": 520
                             },
                             "end": {
-                                "x": 780,
+                                "x": 500,
                                 "y": 520
                             },
-                            "time": 6
+                            "time": 9
                         },
                         {
                             "start": {
-                                "x": 780,
+                                "x": 500,
                                 "y": 520
                             },
                             "end": {
-                                "x": 850,
+                                "x": -50,
                                 "y": 520
                             },
                             "time": 3
@@ -292,25 +152,36 @@
                     "actions": [
                         {
                             "start": {
-                                "x": -50,
+                                "x": 250,
                                 "y": 520
                             },
                             "end": {
-                                "x": 200,
+                                "x": 475,
                                 "y": 520
                             },
                             "time": 3
                         },
                         {
                             "start": {
-                                "x": 200,
+                                "x": 475,
                                 "y": 520
                             },
                             "end": {
-                                "x": 200,
+                                "x": 475,
                                 "y": 520
                             },
                             "time": 9
+                        },
+                        {
+                            "start": {
+                                "x": 475,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": -100,
+                                "y": 520
+                            },
+                            "time": 3
                         }
                     ]
                 }
@@ -342,18 +213,18 @@
                     "spriteName": "dialogsprite",
                     "dialogs": [
                         {
-                            "materialName": "zone6_w1",
-                            "startTime": 3,
-                            "duration": 3
-                        },
-                        {
-                            "materialName": "zone6_w2",
+                            "materialName": "final_pc1",
                             "startTime": 6,
                             "duration": 3
                         },
                         {
-                            "materialName": "zone6_w3",
+                            "materialName": "final_pc2",
                             "startTime": 9,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "final_pc3",
+                            "startTime": 12,
                             "duration": 3
                         }
                     ]

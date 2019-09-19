@@ -18,12 +18,16 @@ function createWindow() {
     minHeight: 150,
     minWidth: 200,
     minimizable: true,
-    maximizable: true,
+    maximizable: false,
+    fullscreen: false,
     movable: true,
     webPreferences: {
       nodeIntegration: true
     }
   });
+  
+  // Turns off menu
+  mainWindow.setMenu(null);
 
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");

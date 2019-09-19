@@ -76,7 +76,7 @@
                         {
                             "name": "playbutton",
                             "type": "guibutton",
-                            "zoneName": "zone6_1"
+                            "zoneName": "boss_wizard.sequence"
                         }
                     ]
                 },

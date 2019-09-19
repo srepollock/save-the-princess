@@ -1,0 +1,265 @@
+{
+    "name": "final_village.sequence",
+    "description": "Princess and Gideon return to the town",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "village_sequence",
+                    "type": "sprite",
+                    "materialName": "village_sequence",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "nextScene"
+                        }
+                    ]
+                },
+                {
+                    "name": "beginningsequencesound",
+                    "type": "sound",
+                    "soundName": "village_sound"
+                }
+            ]
+        },
+        {
+            "name": "princess",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 445
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "princesssprite",
+                    "type": "animatedsprite",
+                    "materialName": "princess_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "princesssequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "princesssprite",
+                    "attackSpriteName": "princess_walk",
+                    "dieSpriteName": "princess_walk",
+                    "hitSpriteName": "princess_walk",
+                    "walkSpriteName": "princess_walk",
+                    "idleSpriteName": "princess_idle",
+                    "jumpSpriteName": "princess_idle",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": -350,
+                                "y": 445
+                            },
+                            "time": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "peasent",
+            "transform": {
+                "position": {
+                    "x": 900,
+                    "y": 445
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "peasent_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "peasentsprite",
+                    "attackSpriteName": "peasent_walk",
+                    "dieSpriteName": "peasent_walk",
+                    "hitSpriteName": "peasent_walk",
+                    "walkSpriteName": "peasent_walk",
+                    "idleSpriteName": "peasent_walk",
+                    "jumpSpriteName": "peasent_jump",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 900,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": -250,
+                                "y": 445
+                            },
+                            "time": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "knight1",
+            "transform": {
+                "position": {
+                    "x": 1000,
+                    "y": 445
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [
+                {
+                    "name": "knight2",
+                    "transform": {
+                        "position": {
+                            "x": 40,
+                            "y": 0
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "knightsprite",
+                            "type": "animatedsprite",
+                            "materialName": "knight_walk",
+                            "frameHeight": 72,
+                            "frameWidth": 72,
+                            "frameCount": 8,
+                            "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                        }
+                    ],
+                    "behaviours": []
+                },
+                {
+                    "name": "knight3",
+                    "transform": {
+                        "position": {
+                            "x": -40,
+                            "y": 0
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "knightsprite",
+                            "type": "animatedsprite",
+                            "materialName": "knight_walk",
+                            "frameHeight": 72,
+                            "frameWidth": 72,
+                            "frameCount": 8,
+                            "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                        }
+                    ],
+                    "behaviours": [
+                        
+                    ]
+                },
+                {
+                    "name": "knight4",
+                    "transform": {
+                        "position": {
+                            "x": -80,
+                            "y": 0
+                        }
+                    },
+                    "children": [],
+                    "components": [{
+                            "name": "knightsprite",
+                            "type": "animatedsprite",
+                            "materialName": "knight_walk",
+                            "frameHeight": 72,
+                            "frameWidth": 72,
+                            "frameCount": 8,
+                            "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                        }
+                    ],
+                    "behaviours": [
+                        
+                    ]
+                }
+            ],
+            "components": [{
+                    "name": "knightsprite",
+                    "type": "animatedsprite",
+                    "materialName": "knight_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "knight_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "knightsprite",
+                    "attackSpriteName": "knight_walk",
+                    "dieSpriteName": "knight_walk",
+                    "hitSpriteName": "knight_walk",
+                    "walkSpriteName": "knight_walk",
+                    "idleSpriteName": "knight_walk",
+                    "jumpSpriteName": "knight_jump",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 1000,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": -100,
+                                "y": 445
+                            },
+                            "time": 15
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

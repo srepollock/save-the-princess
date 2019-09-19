@@ -134,6 +134,10 @@ window.onload = () => {
                     "path": "assets/images/princess_walk.png"
                 },
                 {
+                    "name": "princess_idle",
+                    "path": "assets/images/princess_idle.png"
+                },
+                {
                     "name": "titlescreen",
                     "path": "assets/images/titlescreen.png"
                 },
@@ -281,6 +285,46 @@ window.onload = () => {
                 {
                     "name": "begin_g1",
                     "path": "assets/images/begin_g1.png"
+                },
+                {
+                    "name": "zone4_w1",
+                    "path": "assets/images/zone4_w1.png"
+                },
+                {
+                    "name": "zone4_w2",
+                    "path": "assets/images/zone4_w2.png"
+                },
+                {
+                    "name": "zone4_w3",
+                    "path": "assets/images/zone4_w3.png"
+                },
+                {
+                    "name": "zone4_w4",
+                    "path": "assets/images/zone4_w4.png"
+                },
+                {
+                    "name": "zone6_w1",
+                    "path": "assets/images/zone6_w1.png"
+                },
+                {
+                    "name": "zone6_w2",
+                    "path": "assets/images/zone6_w2.png"
+                },
+                {
+                    "name": "zone6_w3",
+                    "path": "assets/images/zone6_w3.png"
+                },
+                {
+                    "name": "final_pc1",
+                    "path": "assets/images/final_pc1.png"
+                },
+                {
+                    "name": "final_pc2",
+                    "path": "assets/images/final_pc2.png"
+                },
+                {
+                    "name": "final_pc3",
+                    "path": "assets/images/final_pc3.png"
                 },
                 // Backgrounds/environment
                 {
@@ -557,6 +601,12 @@ window.onload = () => {
                 },
                 {
                     "path": "assets/zones/zone6_1.json"
+                },
+                {
+                    "path": "assets/zones/final_castle.sequence.json"
+                },
+                {
+                    "path": "assets/zones/final_village.sequence.json"
                 },
                 {
                     "path": "assets/zones/credits.sequence.json"
