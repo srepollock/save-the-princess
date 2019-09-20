@@ -1,0 +1,364 @@
+{
+    "name": "boss_wizard.sequence",
+    "description": "Wizard battle sequence.",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": -190,
+                    "y": -160
+                },
+                "scale": {
+                    "x": 10,
+                    "y": 8
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "zone6_castle1",
+                    "type": "sprite",
+                    "materialName": "zone6_castle1",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "nextScene"
+                        }
+                    ]
+                },
+                {
+                "name": "zone6sound",
+                "type": "sound",
+                "soundName": "evilcastle"
+                }
+            ]
+        },
+        {
+            "name": "chandelier1",
+            "transform": {
+                "position": {
+                    "x": 185,
+                    "y": 400
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "light3",
+                    "type": "animatedsprite",
+                    "materialName": "light3",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 5,
+                    "frameSequence": [0, 1, 2, 3, 4]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "chandelier2",
+            "transform": {
+                "position": {
+                    "x": 442,
+                    "y": 400
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "light3",
+                    "type": "animatedsprite",
+                    "materialName": "light3",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 5,
+                    "frameSequence": [0, 1, 2, 3, 4]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "chandelier3",
+            "transform": {
+                "position": {
+                    "x": 707,
+                    "y": 400
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "light3",
+                    "type": "animatedsprite",
+                    "materialName": "light3",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 5,
+                    "frameSequence": [0, 1, 2, 3, 4]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "wizard",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 420
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wizardsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wizard_idle",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "wizard_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "wizardsprite",
+                    "attackSpriteName": "wizard_attack",
+                    "dieSpriteName": "wizard_die",
+                    "hitSpriteName": "wizard_hit",
+                    "walkSpriteName": "wizard_run",
+                    "idleSpriteName": "wizard_idle",
+                    "jumpSpriteName": "wizard_idle",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 420
+                            },
+                            "end": {
+                                "x": 720,
+                                "y": 422
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 720,
+                                "y": 422
+                            },
+                            "end": {
+                                "x": 719,
+                                "y": 422
+                            },
+                            "time": 6
+                        },
+                        {
+                            "start": {
+                                "x": 718,
+                                "y": 422
+                            },
+                            "end": {
+                                "x": 710,
+                                "y": 520
+                            },
+                            "time": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "princess",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "princesssprite",
+                    "type": "animatedsprite",
+                    "materialName": "princess_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "princesssequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "princesssprite",
+                    "attackSpriteName": "princess_walk",
+                    "dieSpriteName": "princess_walk",
+                    "hitSpriteName": "princess_walk",
+                    "walkSpriteName": "princess_walk",
+                    "idleSpriteName": "princess_idle",
+                    "jumpSpriteName": "princess_idle",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 780,
+                                "y": 520
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 780,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 780,
+                                "y": 520
+                            },
+                            "time": 6
+                        },
+                        {
+                            "start": {
+                                "x": 780,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 520
+                            },
+                            "time": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "peasent",
+            "transform": {
+                "position": {
+                    "x": 20,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "peasent_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "peasentsprite",
+                    "attackSpriteName": "peasent_walk",
+                    "dieSpriteName": "peasent_walk",
+                    "hitSpriteName": "peasent_walk",
+                    "walkSpriteName": "peasent_walk",
+                    "idleSpriteName": "peasent_walk",
+                    "jumpSpriteName": "peasent_jump",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": -50,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 200,
+                                "y": 520
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 200,
+                                "y": 520
+                            },
+                            "end": {
+                                "x": 200,
+                                "y": 520
+                            },
+                            "time": 9
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "dialog",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 250
+                },
+                "scale": {
+                    "x": 4,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "dialogsprite",
+                    "type": "sprite",
+                    "materialName": "debug"
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "dialogsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "zone6_w1",
+                            "startTime": 3,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "zone6_w2",
+                            "startTime": 6,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "zone6_w3",
+                            "startTime": 9,
+                            "duration": 3
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

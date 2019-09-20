@@ -1,7 +1,6 @@
 {
-    "name": "howtoplay",
+    "name": "howtoplay.sequence",
     "description": "Shows the user how to play the game",
-    "id": "",
     "objects": [
         {
             "name": "background",
@@ -12,59 +11,78 @@
                 }
             },
             "children": [],
-            "components": [{
-                    "name": "background_zone1",
-                    "type": "sprite",
-                    "materialName": "background_zone1"
+            "components": [],
+            "behaviours": [
+                {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "titlescreen"
+                        }
+                    ]
                 },
                 {
-                    "name": "",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 0,
-                        "height": 0
-                    }
+                    "name": "howtoplaysound",
+                    "type": "sound",
+                    "soundName": "howtoplay"
                 }
-            ],
-            "behaviours": []
+            ]
         },
         {
-            "name": "player",
+            "name": "dialog",
             "transform": {
                 "position": {
-                    "x": 20,
-                    "y": 420
+                    "x": 400,
+                    "y": 300
                 },
                 "scale": {
-                    "x": 2,
+                    "x": 4,
                     "y": 2
                 }
             },
             "children": [],
             "components": [{
-                    "name": "idle",
-                    "type": "animatedsprite",
-                    "materialName": "peasent_idle",
-                    "frameHeight": 72,
-                    "frameWidth": 72,
-                    "frameCount": 4,
-                    "frameSequence": [0, 1, 2, 1]
-                },
-                {
-                    "name": "playercollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "circle",
-                        "radius": 36
-                    }
+                    "name": "dialogsprite",
+                    "type": "sprite",
+                    "materialName": "debug"
                 }
             ],
-            "behaviours": [{
-                "name": "movementbehaviour",
-                "type": "keyboardmovement",
-                "speed": 1
-            }]
+            "behaviours": [
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "dialogsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "howtoplay_banner",
+                            "startTime": 0,
+                            "duration": 5
+                        },
+                        {
+                            "materialName": "movement_banner",
+                            "startTime": 5,
+                            "duration": 5
+                        },
+                        {
+                            "materialName": "attack_banner",
+                            "startTime": 10,
+                            "duration": 5
+                        },
+                        {
+                            "materialName": "jump_banner",
+                            "startTime": 15,
+                            "duration": 5
+                        },
+                        {
+                            "materialName": "select_banner",
+                            "startTime": 20,
+                            "duration": 5
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

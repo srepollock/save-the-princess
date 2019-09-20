@@ -21,7 +21,7 @@
 		"body": [
 			"{",
 				"\t\"name\": \"$1\",",
-				"\t\"path\": \"assets/images/$2\"",
+				"\t\"path\": \"assets/images/$2.png\"",
 			"},",
 		]
 	}

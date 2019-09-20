@@ -1,0 +1,294 @@
+{
+    "name": "boss_dragon.sequence",
+    "description": "Dragon battle sequence.",
+    "id": "",
+    "objects": [
+        {
+            "name": "background",
+            "transform": {
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "scale": {
+                    "x": 8,
+                    "y": 6
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "mountain_background",
+                    "type": "sprite",
+                    "materialName": "zone4_mountain1",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "dragonbosstheme",
+                    "type": "sound",
+                    "soundName": "dragonbosstheme"
+                }
+            ]
+        },
+        {
+            "name": "wizard",
+            "transform": {
+                "position": {
+                    "x": 850,
+                    "y": 400
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "wizardsprite",
+                    "type": "animatedsprite",
+                    "materialName": "wizard_idle",
+                    "frameHeight": 64,
+                    "frameWidth": 64,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "wizard_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "wizardsprite",
+                    "attackSpriteName": "wizard_attack",
+                    "dieSpriteName": "wizard_die",
+                    "hitSpriteName": "wizard_hit",
+                    "walkSpriteName": "wizard_run",
+                    "idleSpriteName": "wizard_idle",
+                    "jumpSpriteName": "wizard_idle",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 400
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 400
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 400
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 400
+                            },
+                            "time": 15
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 400
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 400
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 400
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 400
+                            },
+                            "time": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "dragon",
+            "transform": {
+                "position": {
+                    "x": 700,
+                    "y": -50
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                },
+                "rotation": {
+                    "y": 3.14159
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "dragonsprite",
+                    "type": "animatedsprite",
+                    "materialName": "dragon_fly",
+                    "frameHeight": 80,
+                    "frameWidth": 80,
+                    "frameCount": 6,
+                    "frameSequence": [0, 1, 2, 3, 2, 1]
+                },
+                {
+                    "name": "dragoncollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 80,
+                        "height": 80
+                    }
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "dragon_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "dragonsprite",
+                    "attackSpriteName": "dragpon_fly",
+                    "dieSpriteName": "dragon_die",
+                    "hitSpriteName": "dragon_hit",
+                    "walkSpriteName": "dragon_fly",
+                    "idleSpriteName": "dragon_fly",
+                    "jumpSpriteName": "dragon_die",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": -50
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": -50
+                            },
+                            "time": 12
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": -50
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 445
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 700,
+                                "y": 445
+                            },
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 700,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 600,
+                                "y": 400
+                            },
+                            "time": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "peasent",
+            "transform": {
+                "position": {
+                    "x": 300,
+                    "y": 520
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_idle",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 3,
+                    "frameSequence": [0, 1, 2]
+                }
+            ],
+            "behaviours": []
+        },
+        {
+            "name": "dialog",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 250
+                },
+                "scale": {
+                    "x": 4,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "dialogsprite",
+                    "type": "sprite",
+                    "materialName": "debug"
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "dialogsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "zone4_w1",
+                            "startTime": 3,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "zone4_w2",
+                            "startTime": 6,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "zone4_w3",
+                            "startTime": 9,
+                            "duration": 6
+                        },
+                        {
+                            "materialName": "zone4_w4",
+                            "startTime": 15,
+                            "duration": 3
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -85,7 +85,7 @@
                         {
                             "name": "playbutton",
                             "type": "guibutton",
-                            "zoneName": "zone1_1"
+                            "zoneName": "begin.sequence"
                         }
                     ]
                 },
@@ -157,17 +157,17 @@
                 "actions": [
                     {
                         "listen": "KEY_DOWN",
-                        "key": 90,
+                        "key": 76,
                         "response": "cursorSelect"
                     },
                     {
                         "listen": "KEY_DOWN",
-                        "key": 38,
+                        "key": 87,
                         "response": "moveCursorUp"
                     },
                     {
                         "listen": "KEY_DOWN",
-                        "key": 40,
+                        "key": 83,
                         "response": "moveCursorDown"
                     }
                 ]

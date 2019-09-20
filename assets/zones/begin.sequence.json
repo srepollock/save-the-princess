@@ -1,5 +1,5 @@
 {
-    "name": "beginningsequence",
+    "name": "begin.sequence",
     "description": "Princess taken; Gideon introduced",
     "id": "",
     "objects": [
@@ -9,32 +9,47 @@
                 "position": {
                     "x": 0,
                     "y": 0
+                },
+                "scale": {
+                    "x": 8,
+                    "y": 6
                 }
             },
             "children": [],
             "components": [{
                     "name": "village_sequence",
                     "type": "sprite",
-                    "materialName": "village_sequence"
-                },
-                {
-                    "name": "",
-                    "type": "collision",
-                    "shape": {
-                        "type": "rectangle",
-                        "width": 0,
-                        "height": 0
+                    "materialName": "village_sequence",
+                    "origin": {
+                        "x": 0,
+                        "y": 0
                     }
                 }
             ],
-            "behaviours": []
+            "behaviours": [
+                {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "nextScene"
+                        }
+                    ]
+                },
+                {
+                    "name": "beginningsequencesound",
+                    "type": "sound",
+                    "soundName": "village_sound"
+                }
+            ]
         },
         {
             "name": "knight1",
             "transform": {
                 "position": {
-                    "x": 20,
-                    "y": 420
+                    "x": 700,
+                    "y": 445
                 },
                 "scale": {
                     "x": 2,
@@ -46,144 +61,126 @@
                     "name": "knight2",
                     "transform": {
                         "position": {
-                            "x": 0,
+                            "x": 40,
                             "y": 0
                         }
                     },
                     "children": [],
                     "components": [{
                             "name": "knightsprite",
-                            "type": "sprite",
+                            "type": "animatedsprite",
                             "materialName": "knight_walk",
-                            "frameHeight": 0,
-                            "frameWidth": 0,
-                            "frameCount": 3,
+                            "frameHeight": 72,
+                            "frameWidth": 72,
+                            "frameCount": 8,
                             "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
                         }
                     ],
                     "behaviours": []
                 },
                 {
-                    "name": "knight2",
+                    "name": "knight3",
                     "transform": {
                         "position": {
-                            "x": 0,
+                            "x": -40,
                             "y": 0
                         }
                     },
                     "children": [],
                     "components": [{
-                            "name": "",
-                            "type": "sprite",
-                            "materialName": "",
-                            "frameHeight": 0,
-                            "frameWidth": 0,
-                            "frameCount": 3,
-                            "frameSequence": [0, 1, 2]
-                        },
-                        {
-                            "name": "",
-                            "type": "collision",
-                            "shape": {
-                                "type": "rectangle",
-                                "width": 0,
-                                "height": 0
-                            }
+                            "name": "knightsprite",
+                            "type": "animatedsprite",
+                            "materialName": "knight_walk",
+                            "frameHeight": 72,
+                            "frameWidth": 72,
+                            "frameCount": 8,
+                            "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
                         }
                     ],
                     "behaviours": [
-                        {
-                            "name": "knight_sequence",
-                            "type": "sequence",
-                            "animatedSpriteName": "orcsprite",
-                            "attackSpriteName": "orc_walk",
-                            "dieSpriteName": "orc_die",
-                            "hitSpriteName": "orc_die",
-                            "walkSpriteName": "orc_walk",
-                            "idleSpriteName": "orc_walk",
-                            "jumpSpriteName": "orc_walk",
-                            "actions": [
-                                {
-                                    "start": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "end": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "time": 0,
-                                    "skip": true
-                                },
-                                {
-                                    "start": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "end": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "time": 0,
-                                    "skip": true
-                                },
-                                {
-                                    "start": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "end": {
-                                        "x": 0,
-                                        "y": 0
-                                    },
-                                    "time": 0,
-                                    "skip": true
-                                }
-                            ]
-                        }
+                        
                     ]
                 }
             ],
             "components": [{
-                    "name": "idle",
+                    "name": "knightsprite",
                     "type": "animatedsprite",
-                    "materialName": "peasent_idle",
+                    "materialName": "knight_walk",
                     "frameHeight": 72,
                     "frameWidth": 72,
-                    "frameCount": 4,
-                    "frameSequence": [0, 1, 2, 1]
-                },
-                {
-                    "name": "playercollision",
-                    "type": "collision",
-                    "shape": {
-                        "type": "circle",
-                        "radius": 36
-                    }
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
                 }
             ],
-            "behaviours": [{
-                "name": "movementbehaviour",
-                "type": "keyboardmovement",
-                "speed": 1
-            }]
+            "behaviours": [
+                {
+                    "name": "knight_sequence",
+                    "type": "sequence",
+                    "animatedSpriteName": "knightsprite",
+                    "attackSpriteName": "knight_walk",
+                    "dieSpriteName": "knight_walk",
+                    "hitSpriteName": "knight_walk",
+                    "walkSpriteName": "knight_walk",
+                    "idleSpriteName": "knight_walk",
+                    "jumpSpriteName": "knight_jump",
+                    "actions": [
+                        {
+                            "start": {
+                                "x": 825,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 550,
+                                "y": 445
+                            },
+                            "time": 9
+                        },
+                        {
+                            "start": {
+                                "x": 550,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 550,
+                                "y": 445
+                            },
+                            "time": 18
+                        },
+                        {
+                            "start": {
+                                "x": 550,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 825,
+                                "y": 445
+                            },
+                            "time": 3
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "peasent",
             "transform": {
                 "position": {
-                    "x": 0,
-                    "y": 0
+                    "x": 20,
+                    "y": 445
+                },
+                "scale": {
+                    "x": 2,
+                    "y": 2
                 }
             },
             "children": [],
             "components": [{
-                    "name": "knightsprite",
-                    "type": "sprite",
-                    "materialName": "knight_walk",
-                    "frameHeight": 0,
-                    "frameWidth": 0,
-                    "frameCount": 3,
+                    "name": "peasentsprite",
+                    "type": "animatedsprite",
+                    "materialName": "peasent_walk",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
                     "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7]
                 }
             ],
@@ -191,42 +188,121 @@
                 {
                     "name": "peasent_sequence",
                     "type": "sequence",
+                    "animatedSpriteName": "peasentsprite",
+                    "attackSpriteName": "peasent_walk",
+                    "dieSpriteName": "peasent_walk",
+                    "hitSpriteName": "peasent_walk",
+                    "walkSpriteName": "peasent_walk",
+                    "idleSpriteName": "peasent_walk",
+                    "jumpSpriteName": "peasent_jump",
                     "actions": [
                         {
                             "start": {
-                                "x": 0,
-                                "y": 0
+                                "x": 50,
+                                "y": 445
                             },
                             "end": {
-                                "x": 0,
-                                "y": 0
+                                "x": 350,
+                                "y": 445
                             },
-                            "time": 0,
-                            "skip": true
+                            "time": 6
                         },
                         {
                             "start": {
-                                "x": 0,
-                                "y": 0
+                                "x": 350,
+                                "y": 445
                             },
                             "end": {
-                                "x": 0,
-                                "y": 0
+                                "x": 350,
+                                "y": 445
                             },
-                            "time": 0,
-                            "skip": true
+                            "time": 18
                         },
                         {
                             "start": {
-                                "x": 0,
-                                "y": 0
+                                "x": 350,
+                                "y": 445
                             },
                             "end": {
-                                "x": 0,
-                                "y": 0
+                                "x": 850,
+                                "y": 445
                             },
-                            "time": 0,
-                            "skip": true
+                            "time": 3
+                        },
+                        {
+                            "start": {
+                                "x": 850,
+                                "y": 445
+                            },
+                            "end": {
+                                "x": 850,
+                                "y": 445
+                            },
+                            "time": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "dialog",
+            "transform": {
+                "position": {
+                    "x": 400,
+                    "y": 250
+                },
+                "scale": {
+                    "x": 4,
+                    "y": 2
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "dialogsprite",
+                    "type": "sprite",
+                    "materialName": "debug"
+                }
+            ],
+            "behaviours": [
+                {
+                    "name": "beginningdialog",
+                    "type": "dialog",
+                    "spriteName": "dialogsprite",
+                    "dialogs": [
+                        {
+                            "materialName": "begin_k1",
+                            "startTime": 3,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k2",
+                            "startTime": 6,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k3",
+                            "startTime": 9,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_g1",
+                            "startTime": 12,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k4",
+                            "startTime": 15,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k5",
+                            "startTime": 18,
+                            "duration": 3
+                        },
+                        {
+                            "materialName": "begin_k6",
+                            "startTime": 21,
+                            "duration": 3
                         }
                     ]
                 }

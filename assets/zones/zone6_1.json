@@ -150,7 +150,7 @@
             "behaviours": [{
                     "name": "flagbehaviour",
                     "type": "flag",
-                    "zoneName": "titlescreen",
+                    "zoneName": "final_castle.sequence",
                     "playerCollisionComponent": "playercollision",
                     "flagCollisionComponent": "flagcollision"
                 },
@@ -230,8 +230,8 @@
             "name": "wizard",
             "transform": {
                 "position": {
-                    "x": 780,
-                    "y": 420
+                    "x": 710,
+                    "y": 520
                 },
                 "rotation": {
                     "y": 3.14159

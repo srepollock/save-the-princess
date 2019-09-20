@@ -134,6 +134,10 @@ window.onload = () => {
                     "path": "assets/images/princess_walk.png"
                 },
                 {
+                    "name": "princess_idle",
+                    "path": "assets/images/princess_idle.png"
+                },
+                {
                     "name": "titlescreen",
                     "path": "assets/images/titlescreen.png"
                 },
@@ -172,6 +176,14 @@ window.onload = () => {
                 {
                     "name": "wizard_run",
                     "path": "assets/images/wizard_run.png"
+                },
+                {
+                    "name": "wizard_idle",
+                    "path": "assets/images/wizard_idle.png"
+                },
+                {
+                    "name": "wizard_jump",
+                    "path": "assets/images/wizard_jump.png"
                 },
                 {
                     "name": "wizard_attack_vfx_e_impact",
@@ -245,6 +257,96 @@ window.onload = () => {
                     "name": "troll_die",
                     "path": "assets/images/troll_die.png"
                 },
+                // Dialogs
+                {
+                    "name": "attack_banner",
+                    "path": "assets/images/attack_banner.png"
+                },
+                {
+                    "name": "jump_banner",
+                    "path": "assets/images/jump_banner.png"
+                },
+                {
+                    "name": "howtoplay_banner",
+                    "path": "assets/images/howtoplay_banner.png"
+                },
+                {
+                    "name": "movement_banner",
+                    "path": "assets/images/movement_banner.png"
+                },
+                {
+                    "name": "select_banner",
+                    "path": "assets/images/select_banner.png"
+                },
+                {
+                    "name": "begin_k1",
+                    "path": "assets/images/begin_k1.png"
+                },
+                {
+                    "name": "begin_k2",
+                    "path": "assets/images/begin_k2.png"
+                },
+                {
+                    "name": "begin_k3",
+                    "path": "assets/images/begin_k3.png"
+                },
+                {
+                    "name": "begin_k4",
+                    "path": "assets/images/begin_k4.png"
+                },
+                {
+                    "name": "begin_k5",
+                    "path": "assets/images/begin_k5.png"
+                },
+                {
+                    "name": "begin_k6",
+                    "path": "assets/images/begin_k6.png"
+                },
+                {
+                    "name": "begin_g1",
+                    "path": "assets/images/begin_g1.png"
+                },
+                {
+                    "name": "zone4_w1",
+                    "path": "assets/images/zone4_w1.png"
+                },
+                {
+                    "name": "zone4_w2",
+                    "path": "assets/images/zone4_w2.png"
+                },
+                {
+                    "name": "zone4_w3",
+                    "path": "assets/images/zone4_w3.png"
+                },
+                {
+                    "name": "zone4_w4",
+                    "path": "assets/images/zone4_w4.png"
+                },
+                {
+                    "name": "zone6_w1",
+                    "path": "assets/images/zone6_w1.png"
+                },
+                {
+                    "name": "zone6_w2",
+                    "path": "assets/images/zone6_w2.png"
+                },
+                {
+                    "name": "zone6_w3",
+                    "path": "assets/images/zone6_w3.png"
+                },
+                {
+                    "name": "final_pc1",
+                    "path": "assets/images/final_pc1.png"
+                },
+                {
+                    "name": "final_pc2",
+                    "path": "assets/images/final_pc2.png"
+                },
+                {
+                    "name": "final_pc3",
+                    "path": "assets/images/final_pc3.png"
+                },
+                // Backgrounds/environment
                 {
                     "name": "light1",
                     "path": "assets/images/light1.png"
@@ -333,6 +435,47 @@ window.onload = () => {
                     "name": "zone6_castle1",
                     "path": "assets/images/zone6_castle1.png"
                 },
+                // Credits
+                {
+                    "name": "credit1",
+                    "path": "assets/images/credit1.png"
+                },
+                {
+                    "name": "credit2",
+                    "path": "assets/images/credit2.png"
+                },
+                {
+                    "name": "credit3",
+                    "path": "assets/images/credit3.png"
+                },
+                {
+                    "name": "credit4",
+                    "path": "assets/images/credit4.png"
+                },
+                {
+                    "name": "credit5",
+                    "path": "assets/images/credit5.png"
+                },
+                {
+                    "name": "credit6",
+                    "path": "assets/images/credit6.png"
+                },
+                {
+                    "name": "credit7",
+                    "path": "assets/images/credit7.png"
+                },
+                {
+                    "name": "credit8",
+                    "path": "assets/images/credit8.png"
+                },
+                {
+                    "name": "credit9",
+                    "path": "assets/images/credit9.png"
+                },
+                {
+                    "name": "credit10",
+                    "path": "assets/images/credit10.png"
+                },
             ],
             "sounds": [
                 {
@@ -345,7 +488,8 @@ window.onload = () => {
                 },
                 {
                     "name": "credits",
-                    "path": "assets/sounds/credits.mp3"
+                    "path": "assets/sounds/credits.mp3",
+                    "loop": true
                 },
                 {
                     "name": "death",
@@ -357,7 +501,8 @@ window.onload = () => {
                 },
                 {
                     "name": "dragonbosstheme",
-                    "path": "assets/sounds/dragonbosstheme.mp3"
+                    "path": "assets/sounds/dragonbosstheme.mp3",
+                    "loop": true
                 },
                 {
                     "name": "dragonshout",
@@ -369,7 +514,8 @@ window.onload = () => {
                 },
                 {
                     "name": "evilcastle",
-                    "path": "assets/sounds/evilcastle.mp3"
+                    "path": "assets/sounds/evilcastle.mp3",
+                    "loop": true
                 },
                 {
                     "name": "fire",
@@ -381,7 +527,8 @@ window.onload = () => {
                 },
                 {
                     "name": "maintheme",
-                    "path": "assets/sounds/maintheme.mp3"
+                    "path": "assets/sounds/maintheme.mp3",
+                    "loop": true
                 },
                 {
                     "name": "playerattack",
@@ -405,7 +552,8 @@ window.onload = () => {
                 },
                 {
                     "name": "wizardbosstheme",
-                    "path": "assets/sounds/wizardbosstheme.mp3"
+                    "path": "assets/sounds/wizardbosstheme.mp3",
+                    "loop": true
                 },
                 {
                     "name": "wizardshot",
@@ -413,20 +561,28 @@ window.onload = () => {
                 },
                 {
                     "name": "zone1",
-                    "path": "assets/sounds/zone1.mp3"
+                    "path": "assets/sounds/zone1.mp3",
+                    "loop": true
                 },
                 {
                     "name": "zone2",
-                    "path": "assets/sounds/zone2.mp3"
+                    "path": "assets/sounds/zone2.mp3",
+                    "loop": true
                 },
                 {
                     "name": "zone3",
-                    "path": "assets/sounds/zone3.mp3"
+                    "path": "assets/sounds/zone3.mp3",
+                    "loop": true
                 },
                 {
                     "name": "zonecomplete",
                     "path": "assets/sounds/zonecomplete.wav"
-                }
+                },
+                {
+                    "name": "village_sound",
+                    "path": "assets/sounds/village_sound.wav",
+                    "loop": true
+                },
             ],
             "zones": [
                 {
@@ -436,13 +592,13 @@ window.onload = () => {
                     "path": "assets/zones/titlescreen.json"
                 },
                 {
-                    "path": "assets/zones/begin.sequence.json"
-                },
-                {
                     "path": "assets/zones/howtoplay.sequence.json"
                 },
                 {
-                    "path": "assets/zones/zone1.sequence.json"
+                    "path": "assets/zones/begin.sequence.json"
+                },
+                {
+                    "path": "assets/zones/zone1.json"
                 },
                 {
                     "path": "assets/zones/zone1_1.json"
@@ -454,7 +610,7 @@ window.onload = () => {
                     "path": "assets/zones/zone1_3.json"
                 },
                 {
-                    "path": "assets/zones/zone2.sequence.json"
+                    "path": "assets/zones/zone2.json"
                 },
                 {
                     "path": "assets/zones/zone2_1.json"
@@ -466,7 +622,7 @@ window.onload = () => {
                     "path": "assets/zones/zone2_3.json"
                 },
                 {
-                    "path": "assets/zones/zone3.sequence.json"
+                    "path": "assets/zones/zone3.json"
                 },
                 {
                     "path": "assets/zones/zone3_1.json"
@@ -478,13 +634,16 @@ window.onload = () => {
                     "path": "assets/zones/zone3_3.json"
                 },
                 {
-                    "path": "assets/zones/zone4.sequence.json"
+                    "path": "assets/zones/zone4.json"
+                },
+                {
+                    "path": "assets/zones/boss_dragon.sequence.json"
                 },
                 {
                     "path": "assets/zones/zone4_1.json"
                 },
                 {
-                    "path": "assets/zones/zone5.sequence.json"
+                    "path": "assets/zones/zone5.json"
                 },
                 {
                     "path": "assets/zones/zone5_1.json"
@@ -496,10 +655,19 @@ window.onload = () => {
                     "path": "assets/zones/zone5_3.json"
                 },
                 {
-                    "path": "assets/zones/zone6.sequence.json"
+                    "path": "assets/zones/zone6.json"
+                },
+                {
+                    "path": "assets/zones/boss_wizard.sequence.json"
                 },
                 {
                     "path": "assets/zones/zone6_1.json"
+                },
+                {
+                    "path": "assets/zones/final_castle.sequence.json"
+                },
+                {
+                    "path": "assets/zones/final_village.sequence.json"
                 },
                 {
                     "path": "assets/zones/credits.sequence.json"
