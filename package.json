@@ -32,7 +32,6 @@
     },
     "homepage": "http://spollock.ca/save-the-princess/",
     "dependencies": {
-        "divine-engine": "^0.5.1",
         "electron-updater": "^4.0.0"
     },
     "devDependencies": {
@@ -56,7 +55,7 @@
         "electronVersion": "6.0.9",
         "asar": true,
         "directories": {
-            "app": "/Users/Spencer/Documents/git/de-electron-latest",
+            "app": ".",
             "output": "dist"
         },
         "mac": {
