@@ -233,6 +233,7 @@
                     "walkSpriteName": "dragon_fly",
                     "idleSpriteName": "dragon_fly",
                     "jumpSpriteName": "dragon_fly",
+                    "projectileSprite": "dragon_fireball",
                     "actionLoops": [
                         [
                             {
@@ -281,6 +282,80 @@
                                 "end": {
                                 "x": 600,
                                 "y": 500
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "type": "action_1",
+                                "duration": 3,
+                                "start": {
+                                    "x": 200,
+                                    "y": 500
+                                },
+                                "end": {
+                                    "x": 600,
+                                    "y": 500
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 3,
+                                "start": {
+                                    "x": 200,
+                                    "y": 500
+                                },
+                                "end": {
+                                    "x": 600,
+                                    "y": 500
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 3,
+                                "start": {
+                                    "x": 600,
+                                    "y": 500
+                                },
+                                "end": {
+                                    "x": 600,
+                                    "y": 100
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 3,
+                                "start": {
+                                    "x": 600,
+                                    "y": 100
+                                },
+                                "end": {
+                                    "x": 200,
+                                    "y": 100
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 3,
+                                "start": {
+                                    "x": 100,
+                                    "y": 100
+                                },
+                                "end": {
+                                    "x": 200,
+                                    "y": 500
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 3,
+                                "start": {
+                                    "x": 200,
+                                    "y": 500
+                                },
+                                "end": {
+                                    "x": 600,
+                                    "y": 500
                                 }
                             }
                         ]
