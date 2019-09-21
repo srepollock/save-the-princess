@@ -9,7 +9,7 @@
         "commit": "git add --all && git-cz; git push",
         "local-dist": "npm run build; electron-builder -mw --publish never",
         "dist": "electron-builder -mw --publish always",
-        "preinstall": "electron-builder install-app-deps",
+        "postinstall": "electron-builder install-app-deps",
         "release": "standard-version; git push --follow-tags origin master",
         "start": "npm run build; electron .",
         "watch": "tsc --watch"
