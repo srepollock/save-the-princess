@@ -10,7 +10,7 @@
         "local-dist": "npm run build; electron-builder -mw --publish never",
         "dist": "electron-builder -mw --publish always",
         "postinstall": "electron-builder install-app-deps",
-        "release": "standard-version; git push --follow-tags origin master",
+        "release": "standard-version",
         "start": "npm run build; electron .",
         "watch": "tsc --watch"
     },
