@@ -28,6 +28,16 @@
             ],
             "behaviours": [
                 {
+                    "name": "nextSceneclick",
+                    "type": "openingguibehaviour",
+                    "actions": [
+                        {
+                            "listen": "KEY_DOWN",
+                            "response": "nextScene"
+                        }
+                    ]
+                },
+                {
                     "name": "dragonbosstheme",
                     "type": "sound",
                     "soundName": "dragonbosstheme"
