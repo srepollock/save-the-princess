@@ -1,6 +1,6 @@
 {
     "name": "save-the-princess",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Save the Princess built on the Divine Engine.",
     "main": "main.js",
     "scripts": {

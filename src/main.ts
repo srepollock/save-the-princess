@@ -1,7 +1,9 @@
 // Modules to control application life and create native browser window
 import {app, BrowserWindow, ipcMain} from "electron";
-import {autoUpdater} from "electron-updater";
+import { autoUpdater } from "electron-updater";
 import * as path from "path";
+
+autoUpdater.checkForUpdatesAndNotify();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

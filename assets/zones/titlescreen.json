@@ -115,33 +115,6 @@
                             "zoneName": "howtoplay.sequence"
                         }
                     ]
-                },
-                {
-                    "name": "exitbutton",
-                    "transform": {
-                        "position": {
-                            "x": 0,
-                            "y": 320
-                        },
-                        "scale": {
-                            "x": 1,
-                            "y": 0.4
-                        }
-                    },
-                    "children": [],
-                    "components": [{
-                            "name": "exitbuttonsprite",
-                            "type": "sprite",
-                            "materialName": "exit"
-                        }
-                    ],
-                    "behaviours": [
-                        {
-                            "name": "exitbutton",
-                            "type": "guibutton",
-                            "zoneName": "exit"
-                        }
-                    ]
                 }
             ],
             "components": [],
@@ -151,8 +124,7 @@
                 "cursor": "cursor",
                 "buttons": [
                     "playbutton",
-                    "howtoplaybutton",
-                    "exitbutton"
+                    "howtoplaybutton"
                 ],
                 "actions": [
                     {
