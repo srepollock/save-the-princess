@@ -164,6 +164,262 @@
             ]
         },
         {
+            "name": "skeleton1",
+            "transform": {
+                "position": {
+                    "x": 890,
+                    "y": 475
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "skeletonsprite",
+                    "type": "animatedsprite",
+                    "materialName": "skeleton_run",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "skeletonsprite",
+                "attackSpriteName": "skeleton_run",
+                "dieSpriteName": "skeleton_die",
+                "hitSpriteName": "skeleton_die",
+                "walkSpriteName": "skeleton_run",
+                "idleSpriteName": "skeleton_run",
+                "jumpSpriteName": "skeleton_run",
+                "start": {
+                    "x": -200,
+                    "y": 475
+                },
+                "end": {
+                    "x": 900,
+                    "y": 475
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "playerCollisionComponent": "playercollision",
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 2
+            }]
+        },
+        {
+            "name": "skeleton2",
+            "transform": {
+                "position": {
+                    "x": 890,
+                    "y": 475
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "skeletonsprite",
+                    "type": "animatedsprite",
+                    "materialName": "skeleton_run",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "skeletonsprite",
+                "attackSpriteName": "skeleton_run",
+                "dieSpriteName": "skeleton_die",
+                "hitSpriteName": "skeleton_die",
+                "walkSpriteName": "skeleton_run",
+                "idleSpriteName": "skeleton_run",
+                "jumpSpriteName": "skeleton_run",
+                "start": {
+                    "x": -200,
+                    "y": 475
+                },
+                "end": {
+                    "x": 1000,
+                    "y": 475
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "playerCollisionComponent": "playercollision",
+                "enemyCollisionComponent": "enemycollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 2
+            }]
+        },
+        {
+            "name": "skeleton3",
+            "transform": {
+                "position": {
+                    "x": -300,
+                    "y": 475
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "skeletonsprite",
+                    "type": "animatedsprite",
+                    "materialName": "skeleton_run",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "skeletonsprite",
+                "attackSpriteName": "skeleton_run",
+                "dieSpriteName": "skeleton_die",
+                "hitSpriteName": "skeleton_die",
+                "walkSpriteName": "skeleton_run",
+                "idleSpriteName": "skeleton_run",
+                "jumpSpriteName": "skeleton_run",
+                "start": {
+                    "x": -300,
+                    "y": 475
+                },
+                "end": {
+                    "x": 900,
+                    "y": 475
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 6
+            }]
+        },
+        {
+            "name": "skeleton4",
+            "transform": {
+                "position": {
+                    "x": -200,
+                    "y": 475
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            },
+            "children": [],
+            "components": [{
+                    "name": "skeletonsprite",
+                    "type": "animatedsprite",
+                    "materialName": "skeleton_run",
+                    "frameHeight": 72,
+                    "frameWidth": 72,
+                    "frameCount": 8,
+                    "frameSequence": [0, 1, 2, 3, 4, 5, 6, 7],
+                    "origin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 30,
+                        "height": 30
+                    }
+                }
+            ],
+            "behaviours": [{
+                "name": "enemycontroller",
+                "type": "enemy",
+                "animatedSpriteName": "skeletonsprite",
+                "attackSpriteName": "skeleton_run",
+                "dieSpriteName": "skeleton_die",
+                "hitSpriteName": "skeleton_die",
+                "walkSpriteName": "skeleton_run",
+                "idleSpriteName": "skeleton_run",
+                "jumpSpriteName": "skeleton_run",
+                "start": {
+                    "x": -200,
+                    "y": 475
+                },
+                "end": {
+                    "x": 1000,
+                    "y": 475
+                },
+                "direction": {
+                    "x": 1,
+                    "y": 0
+                },
+                "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
+                "groundCollisionComponent": "groundcollision",
+                "maxVelocityX": 6
+            }]
+        },
+        {
             "name": "player",
             "transform": {
                 "position": {

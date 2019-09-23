@@ -288,6 +288,7 @@
                 },
                 "enemyCollisionComponent": "enemycollision",
                 "groundCollisionComponent": "groundcollision",
+                "playerCollisionComponent": "playercollision",
                 "rotate": false
             }]
         },

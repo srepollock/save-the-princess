@@ -553,6 +553,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision"
             }]
         },
