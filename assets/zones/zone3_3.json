@@ -16,7 +16,12 @@
                 }
             },
             "children": [],
-            "components": [{
+            "components": [
+                {
+                    "name": "scoringcomponent",
+                    "type": "score"
+                },
+                {
                     "name": "zone3_mountain3",
                     "type": "sprite",
                     "materialName": "zone3_mountain3",
@@ -591,6 +596,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision",
                 "maxVelocityX": 1
             }]
@@ -654,6 +660,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision",
                 "maxVelocityX": 4
             }]
@@ -717,6 +724,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision",
                 "maxVelocityX": 1
             }]
@@ -780,6 +788,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision",
                 "maxVelocityX": 1
             }]

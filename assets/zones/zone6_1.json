@@ -15,7 +15,12 @@
                 }
             },
             "children": [],
-            "components": [{
+            "components": [
+                {
+                    "name": "scoringcomponent",
+                    "type": "score"
+                },
+                {
                     "name": "zone6_castle1",
                     "type": "sprite",
                     "materialName": "zone6_castle1",
@@ -80,7 +85,7 @@
             "transform": {
                 "position": {
                     "x": 0,
-                    "y": 580
+                    "y": 570
                 },
                 "scale": {
                     "x": 800,
@@ -103,65 +108,6 @@
                 }
             ],
             "behaviours": []
-        },
-        {
-            "name": "flag",
-            "transform": {
-                "position": {
-                    "x": 750,
-                    "y": 470
-                },
-                "scale": {
-                    "x": 0.4,
-                    "y": 0.4
-                }
-            },
-            "children": [
-                {
-                    "name": "Inner object",
-                    "transform": {
-                        "position": {
-                            "x": 30,
-                            "y": 30
-                        }
-                    },
-                    "children": [],
-                    "components": [{
-                        "name": "flagcollision",
-                        "type": "collision",
-                        "shape": {
-                            "type": "rectangle",
-                            "width": 5,
-                            "height": 5
-                        },
-                        "origin": {
-                            "x": 0,
-                            "y": 0
-                        }
-                    }],
-                    "behaviours": []
-                }
-            ],
-            "components": [{
-                    "name": "flag",
-                    "type": "sprite",
-                    "materialName": "flag"
-                    }],
-            "behaviours": [{
-                    "name": "flagbehaviour",
-                    "type": "flag",
-                    "zoneName": "final_castle.sequence",
-                    "playerCollisionComponent": "playercollision",
-                    "flagCollisionComponent": "flagcollision"
-                },
-                {
-                    "name": "flagrotation",
-                    "type": "rotation",
-                    "rotation": {
-                        "z": 0.01
-                    }
-                }
-            ]
         },
         {
             "name": "chandelier1",
@@ -231,14 +177,14 @@
             "transform": {
                 "position": {
                     "x": 710,
-                    "y": 520
+                    "y": 510
                 },
                 "rotation": {
                     "y": 3.14159
                 },
                 "scale": {
-                    "x": 1.5,
-                    "y": 1.5
+                    "x": 2,
+                    "y": 2
                 }
             },
             "children": [],
@@ -254,9 +200,138 @@
                         "x": 0.5,
                         "y": 0.5
                     }
+                },
+                {
+                    "name": "enemycollision",
+                    "type": "collision",
+                    "shape": {
+                        "type": "rectangle",
+                        "width": 60,
+                        "height": 80
+                    }
                 }
             ],
-            "behaviours": []
+            "behaviours": [
+                {
+                    "name": "enemycontroller",
+                    "type": "boss",
+                    "animatedSpriteName": "wizardsprite",
+                    "attackSpriteName": "wizard_run",
+                    "dieSpriteName": "wizard_die2",
+                    "hitSpriteName": "wizard_hit",
+                    "walkSpriteName": "wizard_run",
+                    "idleSpriteName": "wizard_idle",
+                    "jumpSpriteName": "wizard_run",
+                    "projectileSpriteComponent": "projectilesprite",
+                    "playerCollisionComponent": "playercollision",
+                    "enemyCollisionComponent": "enemycollision",
+                    "groundCollisionComponent": "groundcollision",
+                    "maxVelocityX": 8,
+                    "maxVelocityY": 8,
+                    "actionLoops": [
+                        [
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 510
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 710,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 100,
+                                    "y": 510
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 100,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 110,
+                                    "y": 510
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 100,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 710,
+                                    "y": 510
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "type": "action_2",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 510
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 710,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 100,
+                                    "y": 510
+                                }
+                            },
+                            {
+                                "type": "action_2",
+                                "duration": 0,
+                                "start": {
+                                    "x": 100,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 110,
+                                    "y": 510
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 100,
+                                    "y": 510
+                                },
+                                "end": {
+                                    "x": 710,
+                                    "y": 510
+                                }
+                            }
+                        ]
+                    ]
+                }
+            ]
         },
         {
             "name": "player",

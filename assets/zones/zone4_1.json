@@ -16,7 +16,12 @@
                 }
             },
             "children": [],
-            "components": [{
+            "components": [
+                {
+                    "name": "scoringcomponent",
+                    "type": "score"
+                },
+                {
                     "name": "zone4_mountain1",
                     "type": "sprite",
                     "materialName": "zone4_mountain1",
@@ -233,7 +238,12 @@
                     "walkSpriteName": "dragon_fly",
                     "idleSpriteName": "dragon_fly",
                     "jumpSpriteName": "dragon_fly",
-                    "projectileSprite": "dragon_fireball",
+                    "projectileSpriteComponent": "projectilesprite",
+                    "playerCollisionComponent": "playercollision",
+                    "enemyCollisionComponent": "enemycollision",
+                    "groundCollisionComponent": "groundcollision",
+                    "maxVelocityX": 8,
+                    "maxVelocityY": 8,
                     "actionLoops": [
                         [
                             {
@@ -241,7 +251,7 @@
                                 "duration": 3,
                                 "start": {
                                     "x": 600,
-                                    "y": 500
+                                    "y": 525
                                 },
                                 "end": {
                                     "x": 600,
@@ -269,7 +279,7 @@
                                 },
                                 "end": {
                                     "x": 200,
-                                    "y": 500
+                                    "y": 525
                                 }
                             },
                             {
@@ -277,25 +287,25 @@
                                 "duration": 3,
                                 "start": {
                                     "x": 200,
-                                    "y": 500
+                                    "y": 525
                                 },
                                 "end": {
-                                "x": 600,
-                                "y": 500
+                                    "x": 600,
+                                    "y": 525
                                 }
                             }
                         ],
                         [
                             {
                                 "type": "action_1",
-                                "duration": 3,
+                                "duration": 0,
                                 "start": {
                                     "x": 200,
-                                    "y": 500
+                                    "y": 525
                                 },
                                 "end": {
                                     "x": 600,
-                                    "y": 500
+                                    "y": 525
                                 }
                             },
                             {
@@ -303,11 +313,11 @@
                                 "duration": 3,
                                 "start": {
                                     "x": 200,
-                                    "y": 500
+                                    "y": 525
                                 },
                                 "end": {
                                     "x": 600,
-                                    "y": 500
+                                    "y": 525
                                 }
                             },
                             {
@@ -315,7 +325,7 @@
                                 "duration": 3,
                                 "start": {
                                     "x": 600,
-                                    "y": 500
+                                    "y": 525
                                 },
                                 "end": {
                                     "x": 600,
@@ -343,7 +353,7 @@
                                 },
                                 "end": {
                                     "x": 200,
-                                    "y": 500
+                                    "y": 525
                                 }
                             },
                             {
@@ -351,19 +361,15 @@
                                 "duration": 3,
                                 "start": {
                                     "x": 200,
-                                    "y": 500
+                                    "y": 525
                                 },
                                 "end": {
                                     "x": 600,
-                                    "y": 500
+                                    "y": 525
                                 }
                             }
                         ]
-                    ],
-                    "enemyCollisionComponent": "enemycollision",
-                    "groundCollisionComponent": "groundcollision",
-                    "maxVelocityX": 8,
-                    "maxVelocityY": 8
+                    ]
                 }
             ]
         }

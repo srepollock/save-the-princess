@@ -16,7 +16,12 @@
                 }
             },
             "children": [],
-            "components": [{
+            "components": [
+                {
+                    "name": "scoringcomponent",
+                    "type": "score"
+                },
+                {
                     "name": "background_zone1",
                     "type": "sprite",
                     "materialName": "zone1_plains",
@@ -251,6 +256,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision"
             }]
         },
@@ -316,6 +322,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision"
             }]
         },
@@ -381,6 +388,7 @@
                     "y": 0
                 },
                 "enemyCollisionComponent": "enemycollision",
+                "playerCollisionComponent": "playercollision",
                 "groundCollisionComponent": "groundcollision"
             }]
         },

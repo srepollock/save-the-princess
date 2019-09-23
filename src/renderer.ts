@@ -66,14 +66,6 @@ window.onload = () => {
                     "path": "assets/images/dragon_die.png"
                 },
                 {
-                    "name": "dragon_fireball",
-                    "path": "assets/images/dragon_fireball.png"
-                },
-                {
-                    "name": "dragon_fireball_impact",
-                    "path": "assets/images/dragon_fireball_impact.png"
-                },
-                {
                     "name": "dragon_fly",
                     "path": "assets/images/dragon_fly.png"
                 },
