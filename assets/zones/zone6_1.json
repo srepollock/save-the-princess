@@ -15,7 +15,12 @@
                 }
             },
             "children": [],
-            "components": [{
+            "components": [
+                {
+                    "name": "scoringcomponent",
+                    "type": "score"
+                },
+                {
                     "name": "zone6_castle1",
                     "type": "sprite",
                     "materialName": "zone6_castle1",
@@ -256,7 +261,175 @@
                     }
                 }
             ],
-            "behaviours": []
+            "behaviours": [
+                {
+                    "name": "enemycontroller",
+                    "type": "boss",
+                    "animatedSpriteName": "wizardsprite",
+                    "attackSpriteName": "wizard_run",
+                    "dieSpriteName": "wizard_die",
+                    "hitSpriteName": "wizard_hit",
+                    "walkSpriteName": "wizard_run",
+                    "idleSpriteName": "wizard_idle",
+                    "jumpSpriteName": "wizard_run",
+                    "projectileSpriteComponent": "projectilesprite",
+                    "playerCollisionComponent": "playercollision",
+                    "enemyCollisionComponent": "enemycollision",
+                    "groundCollisionComponent": "groundcollision",
+                    "maxVelocityX": 8,
+                    "maxVelocityY": 8,
+                    "actionLoops": [
+                        [
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 100,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 100,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 110,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 100,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 710,
+                                    "y": 520
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 100,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 100,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 110,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "action_1",
+                                "duration": 0,
+                                "start": {
+                                    "x": 710,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 700,
+                                    "y": 520
+                                }
+                            },
+                            {
+                                "type": "movement",
+                                "duration": 6,
+                                "start": {
+                                    "x": 100,
+                                    "y": 520
+                                },
+                                "end": {
+                                    "x": 710,
+                                    "y": 520
+                                }
+                            }
+                        ]
+                    ]
+                }
+            ]
         },
         {
             "name": "player",

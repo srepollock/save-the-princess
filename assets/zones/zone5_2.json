@@ -15,7 +15,12 @@
                 }
             },
             "children": [],
-            "components": [{
+            "components": [
+                {
+                    "name": "scoringcomponent",
+                    "type": "score"
+                },
+                {
                     "name": "zone5_castle2",
                     "type": "sprite",
                     "materialName": "zone5_castle2",
