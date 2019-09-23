@@ -1,6 +1,6 @@
 {
     "name": "save-the-princess",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Save the Princess built on the Divine Engine.",
     "main": "main.js",
     "scripts": {
@@ -32,6 +32,7 @@
     },
     "homepage": "http://spollock.ca/save-the-princess/",
     "dependencies": {
+        "divine-engine": "^1.0.1",
         "electron-updater": "^4.0.0"
     },
     "devDependencies": {
