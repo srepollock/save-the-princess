@@ -2,6 +2,7 @@
 import {app, BrowserWindow, ipcMain} from "electron";
 import { autoUpdater } from "electron-updater";
 import * as path from "path";
+import { globalShortcut } from "electron";
 
 autoUpdater.checkForUpdatesAndNotify();
 
@@ -55,6 +56,10 @@ function createWindow() {
         if (err) console.error('Failed to register protocol');
     });
   });
+
+  globalShortcut.register('f5', () => {
+    mainWindow!.reload();
+  })
 }
 
 // This method will be called when Electron has finished
@@ -79,23 +84,6 @@ app.on("activate", () => {
     createWindow();
   }
 });
-
-autoUpdater.on('update-available', () => {
-    mainWindow!.webContents.send('update_available');
-});
-
-autoUpdater.on('update-downloaded', () => {
-    mainWindow!.webContents.send('update_downloaded');
-});
-
-ipcMain.on('app_version', (event: any) => {
-  event.sender.send('app_version', { version: app.getVersion() });
-});
-
-ipcMain.on('restart_app', () => {
-  autoUpdater.quitAndInstall();
-});
-
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
